@@ -15,6 +15,7 @@
 		1500E710256EBAC6007EC947 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1500E70E256EBAC6007EC947 /* LaunchScreen.storyboard */; };
 		1500E71B256EBAC6007EC947 /* Hepatitis2020Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500E71A256EBAC6007EC947 /* Hepatitis2020Tests.swift */; };
 		1500E726256EBAC7007EC947 /* Hepatitis2020UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500E725256EBAC7007EC947 /* Hepatitis2020UITests.swift */; };
+		1500E736256EBC0F007EC947 /* Paciente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500E735256EBC0F007EC947 /* Paciente.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		1500E721256EBAC7007EC947 /* Hepatitis2020UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Hepatitis2020UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1500E725256EBAC7007EC947 /* Hepatitis2020UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hepatitis2020UITests.swift; sourceTree = "<group>"; };
 		1500E727256EBAC7007EC947 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1500E735256EBC0F007EC947 /* Paciente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paciente.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			children = (
 				1500E701256EBAC1007EC947 /* Hepatitis2020 */,
 				1500E719256EBAC6007EC947 /* Hepatitis2020Tests */,
+				1500E734256EBBE5007EC947 /* Class */,
 				1500E724256EBAC7007EC947 /* Hepatitis2020UITests */,
 				1500E700256EBAC1007EC947 /* Products */,
 			);
@@ -126,6 +129,14 @@
 				1500E727256EBAC7007EC947 /* Info.plist */,
 			);
 			path = Hepatitis2020UITests;
+			sourceTree = "<group>";
+		};
+		1500E734256EBBE5007EC947 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				1500E735256EBC0F007EC947 /* Paciente.swift */,
+			);
+			path = Class;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 			files = (
 				1500E70B256EBAC1007EC947 /* Hepatitis2020.xcdatamodeld in Sources */,
 				1500E705256EBAC1007EC947 /* ViewController.swift in Sources */,
+				1500E736256EBC0F007EC947 /* Paciente.swift in Sources */,
 				1500E703256EBAC1007EC947 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
