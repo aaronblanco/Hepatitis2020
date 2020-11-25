@@ -15,7 +15,10 @@
 		1500E710256EBAC6007EC947 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1500E70E256EBAC6007EC947 /* LaunchScreen.storyboard */; };
 		1500E71B256EBAC6007EC947 /* Hepatitis2020Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500E71A256EBAC6007EC947 /* Hepatitis2020Tests.swift */; };
 		1500E726256EBAC7007EC947 /* Hepatitis2020UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500E725256EBAC7007EC947 /* Hepatitis2020UITests.swift */; };
-		1500E736256EBC0F007EC947 /* Paciente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500E735256EBC0F007EC947 /* Paciente.swift */; };
+		1500E743256ED01B007EC947 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500E741256ED01B007EC947 /* Usuario.swift */; };
+		1500E744256ED01B007EC947 /* Prueba.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500E742256ED01B007EC947 /* Prueba.swift */; };
+		1500E747256ED027007EC947 /* PacienteNSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500E745256ED027007EC947 /* PacienteNSObject.swift */; };
+		1500E748256ED027007EC947 /* UsuarioNSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500E746256ED027007EC947 /* UsuarioNSObject.swift */; };
 		935D6E9A256ECCAE003C2BBF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 935D6E99256ECCAE003C2BBF /* .gitignore */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +54,10 @@
 		1500E721256EBAC7007EC947 /* Hepatitis2020UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Hepatitis2020UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1500E725256EBAC7007EC947 /* Hepatitis2020UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hepatitis2020UITests.swift; sourceTree = "<group>"; };
 		1500E727256EBAC7007EC947 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1500E735256EBC0F007EC947 /* Paciente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paciente.swift; sourceTree = "<group>"; };
+		1500E741256ED01B007EC947 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		1500E742256ED01B007EC947 /* Prueba.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prueba.swift; sourceTree = "<group>"; };
+		1500E745256ED027007EC947 /* PacienteNSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PacienteNSObject.swift; sourceTree = "<group>"; };
+		1500E746256ED027007EC947 /* UsuarioNSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioNSObject.swift; sourceTree = "<group>"; };
 		935D6E99256ECCAE003C2BBF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				935D6E99256ECCAE003C2BBF /* .gitignore */,
+				1500E740256ECF88007EC947 /* DataBaseService */,
 				1500E701256EBAC1007EC947 /* Hepatitis2020 */,
 				1500E719256EBAC6007EC947 /* Hepatitis2020Tests */,
 				1500E734256EBBE5007EC947 /* Class */,
@@ -137,9 +144,19 @@
 		1500E734256EBBE5007EC947 /* Class */ = {
 			isa = PBXGroup;
 			children = (
-				1500E735256EBC0F007EC947 /* Paciente.swift */,
+				1500E742256ED01B007EC947 /* Prueba.swift */,
+				1500E741256ED01B007EC947 /* Usuario.swift */,
 			);
 			path = Class;
+			sourceTree = "<group>";
+		};
+		1500E740256ECF88007EC947 /* DataBaseService */ = {
+			isa = PBXGroup;
+			children = (
+				1500E745256ED027007EC947 /* PacienteNSObject.swift */,
+				1500E746256ED027007EC947 /* UsuarioNSObject.swift */,
+			);
+			path = DataBaseService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,9 +291,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1500E747256ED027007EC947 /* PacienteNSObject.swift in Sources */,
+				1500E744256ED01B007EC947 /* Prueba.swift in Sources */,
+				1500E743256ED01B007EC947 /* Usuario.swift in Sources */,
 				1500E70B256EBAC1007EC947 /* Hepatitis2020.xcdatamodeld in Sources */,
+				1500E748256ED027007EC947 /* UsuarioNSObject.swift in Sources */,
 				1500E705256EBAC1007EC947 /* LoginViewController.swift in Sources */,
-				1500E736256EBC0F007EC947 /* Paciente.swift in Sources */,
 				1500E703256EBAC1007EC947 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
