@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1500E703256EBAC1007EC947 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500E702256EBAC1007EC947 /* AppDelegate.swift */; };
-		1500E705256EBAC1007EC947 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500E704256EBAC1007EC947 /* ViewController.swift */; };
+		1500E705256EBAC1007EC947 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500E704256EBAC1007EC947 /* LoginViewController.swift */; };
 		1500E708256EBAC1007EC947 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1500E706256EBAC1007EC947 /* Main.storyboard */; };
 		1500E70B256EBAC1007EC947 /* Hepatitis2020.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1500E709256EBAC1007EC947 /* Hepatitis2020.xcdatamodeld */; };
 		1500E70D256EBAC6007EC947 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1500E70C256EBAC6007EC947 /* Assets.xcassets */; };
@@ -38,7 +38,7 @@
 /* Begin PBXFileReference section */
 		1500E6FF256EBAC1007EC947 /* Hepatitis2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hepatitis2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1500E702256EBAC1007EC947 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1500E704256EBAC1007EC947 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1500E704256EBAC1007EC947 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1500E707256EBAC1007EC947 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1500E70A256EBAC1007EC947 /* Hepatitis2020.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Hepatitis2020.xcdatamodel; sourceTree = "<group>"; };
 		1500E70C256EBAC6007EC947 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,7 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				1500E702256EBAC1007EC947 /* AppDelegate.swift */,
-				1500E704256EBAC1007EC947 /* ViewController.swift */,
+				1500E704256EBAC1007EC947 /* LoginViewController.swift */,
 				1500E706256EBAC1007EC947 /* Main.storyboard */,
 				1500E70C256EBAC6007EC947 /* Assets.xcassets */,
 				1500E70E256EBAC6007EC947 /* LaunchScreen.storyboard */,
@@ -271,7 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1500E70B256EBAC1007EC947 /* Hepatitis2020.xcdatamodeld in Sources */,
-				1500E705256EBAC1007EC947 /* ViewController.swift in Sources */,
+				1500E705256EBAC1007EC947 /* LoginViewController.swift in Sources */,
 				1500E736256EBC0F007EC947 /* Paciente.swift in Sources */,
 				1500E703256EBAC1007EC947 /* AppDelegate.swift in Sources */,
 			);
