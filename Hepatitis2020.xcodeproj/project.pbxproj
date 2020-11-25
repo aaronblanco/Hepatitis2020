@@ -20,6 +20,7 @@
 		1500E747256ED027007EC947 /* PacienteNSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500E745256ED027007EC947 /* PacienteNSObject.swift */; };
 		1500E748256ED027007EC947 /* UsuarioNSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500E746256ED027007EC947 /* UsuarioNSObject.swift */; };
 		935D6E9A256ECCAE003C2BBF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 935D6E99256ECCAE003C2BBF /* .gitignore */; };
+		935D6E9E256ED885003C2BBF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D6E9D256ED885003C2BBF /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		1500E745256ED027007EC947 /* PacienteNSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PacienteNSObject.swift; sourceTree = "<group>"; };
 		1500E746256ED027007EC947 /* UsuarioNSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsuarioNSObject.swift; sourceTree = "<group>"; };
 		935D6E99256ECCAE003C2BBF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		935D6E9D256ED885003C2BBF /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 		1500E701256EBAC1007EC947 /* Hepatitis2020 */ = {
 			isa = PBXGroup;
 			children = (
+				935D6E9D256ED885003C2BBF /* RegisterViewController.swift */,
 				1500E702256EBAC1007EC947 /* AppDelegate.swift */,
 				1500E704256EBAC1007EC947 /* LoginViewController.swift */,
 				1500E706256EBAC1007EC947 /* Main.storyboard */,
@@ -294,6 +297,7 @@
 				1500E747256ED027007EC947 /* PacienteNSObject.swift in Sources */,
 				1500E744256ED01B007EC947 /* Prueba.swift in Sources */,
 				1500E743256ED01B007EC947 /* Usuario.swift in Sources */,
+				935D6E9E256ED885003C2BBF /* RegisterViewController.swift in Sources */,
 				1500E70B256EBAC1007EC947 /* Hepatitis2020.xcdatamodeld in Sources */,
 				1500E748256ED027007EC947 /* UsuarioNSObject.swift in Sources */,
 				1500E705256EBAC1007EC947 /* LoginViewController.swift in Sources */,
