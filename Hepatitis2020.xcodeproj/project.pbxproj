@@ -16,6 +16,7 @@
 		1500E71B256EBAC6007EC947 /* Hepatitis2020Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500E71A256EBAC6007EC947 /* Hepatitis2020Tests.swift */; };
 		1500E726256EBAC7007EC947 /* Hepatitis2020UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500E725256EBAC7007EC947 /* Hepatitis2020UITests.swift */; };
 		1500E736256EBC0F007EC947 /* Paciente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500E735256EBC0F007EC947 /* Paciente.swift */; };
+		935D6E9A256ECCAE003C2BBF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 935D6E99256ECCAE003C2BBF /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		1500E725256EBAC7007EC947 /* Hepatitis2020UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hepatitis2020UITests.swift; sourceTree = "<group>"; };
 		1500E727256EBAC7007EC947 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1500E735256EBC0F007EC947 /* Paciente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paciente.swift; sourceTree = "<group>"; };
+		935D6E99256ECCAE003C2BBF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		1500E6F6256EBAC1007EC947 = {
 			isa = PBXGroup;
 			children = (
+				935D6E99256ECCAE003C2BBF /* .gitignore */,
 				1500E701256EBAC1007EC947 /* Hepatitis2020 */,
 				1500E719256EBAC6007EC947 /* Hepatitis2020Tests */,
 				1500E734256EBBE5007EC947 /* Class */,
@@ -243,6 +246,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				935D6E9A256ECCAE003C2BBF /* .gitignore in Resources */,
 				1500E710256EBAC6007EC947 /* LaunchScreen.storyboard in Resources */,
 				1500E70D256EBAC6007EC947 /* Assets.xcassets in Resources */,
 				1500E708256EBAC1007EC947 /* Main.storyboard in Resources */,
