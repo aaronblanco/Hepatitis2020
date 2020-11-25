@@ -1,20 +1,27 @@
 //
-//  Paciente.swift
-//  Hepatitis2020
+//  Prueba.swift
+//  Actividad
 //
-//  Created by Bruno on 25/11/2020.
-//  Copyright © 2020 ual. All rights reserved.
+//  Created by Aula11 on 25/11/20.
+//  Copyright © 2020 Alberto. All rights reserved.
 //
 
 import UIKit
-
-class Prueba{
+class Prueba {
+    var fatiga: Int
+    var esplenomegalia: Int
+    var ascitis: Int
+    var nivelBulimia: Int
+    var numeroPrueba: Int
+    var resultado: Int
     
-    
-    init?(){
-
+    init(fatiga:Int, esplenomegalia:Int, ascitis:Int, nivelBulimia:Int, numeroPrueba:Int, resultado: Int){
+        self.fatiga = fatiga
+        self.esplenomegalia = esplenomegalia
+        self.ascitis = ascitis
+        self.nivelBulimia = nivelBulimia
+        self.numeroPrueba = numeroPrueba
+        self.resultado = resultado
     }
-
-    
 }
 

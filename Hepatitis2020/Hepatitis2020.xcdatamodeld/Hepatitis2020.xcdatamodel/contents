@@ -8,9 +8,9 @@
         <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="sexo" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="medico" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UsuarioEntity" inverseName="pacientes" inverseEntity="UsuarioEntity" syncable="YES"/>
-        <relationship name="pruebas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TestEntity" inverseName="paciente" inverseEntity="TestEntity" syncable="YES"/>
+        <relationship name="pruebas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PruebaEntity" inverseName="paciente" inverseEntity="PruebaEntity" syncable="YES"/>
     </entity>
-    <entity name="TestEntity" representedClassName="TestEntity" syncable="YES" codeGenerationType="class">
+    <entity name="PruebaEntity" representedClassName="PruebaEntity" syncable="YES" codeGenerationType="class">
         <attribute name="ascitis" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="esplenomegalia" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="fatiga" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -28,8 +28,8 @@
         <relationship name="pacientes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PacienteEntity" inverseName="medico" inverseEntity="PacienteEntity" syncable="YES"/>
     </entity>
     <elements>
-        <element name="UsuarioEntity" positionX="-38.99609375" positionY="-131.96484375" width="128" height="135"/>
         <element name="PacienteEntity" positionX="-42.0234375" positionY="65.98046875" width="128" height="165"/>
-        <element name="TestEntity" positionX="-37.99609375" positionY="284.98046875" width="128" height="150"/>
+        <element name="PruebaEntity" positionX="-37.99609375" positionY="284.98046875" width="128" height="150"/>
+        <element name="UsuarioEntity" positionX="-38.99609375" positionY="-131.96484375" width="128" height="135"/>
     </elements>
 </model>

@@ -1,20 +1,35 @@
 //
-//  Paciente.swift
-//  Hepatitis2020
+//  Usuario.swift
+//  Actividad
 //
-//  Created by Bruno on 25/11/2020.
-//  Copyright © 2020 ual. All rights reserved.
+//  Created by Aula11 on 25/11/20.
+//  Copyright © 2020 Alberto. All rights reserved.
 //
 
 import UIKit
-
-class Usuario{
+class Usuario {
+    var dni:String
+    var password: String
+    var nombre: String?
+    var apellidos: String?
+    var correo: String?
+    var pacientes: [Paciente]
     
-    
-    init?(){
-
+    init (dni:String, pass:String, nombre:String?, apellidos:String?, correo:String?, pacientes: [Paciente]?){
+        self.dni = dni
+        self.password = pass
+        self.nombre = nombre
+        self.apellidos = apellidos
+        self.correo = correo
+        self.pacientes = pacientes ?? []
     }
-
     
+    func registrarse() {
+        
+    }
+    
+    func modificarDatos(){
+        
+    }
 }
 
