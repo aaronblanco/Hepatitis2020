@@ -1,4 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="PacienteEntity" representedClassName="PacienteEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="apellido" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dni" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="fechaNacimiento" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="imagen" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sexo" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="medico" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UsuarioEntity" inverseName="pacientes" inverseEntity="UsuarioEntity" syncable="YES"/>
+        <relationship name="pruebas" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="TestEntity" inverseName="paciente" inverseEntity="TestEntity" syncable="YES"/>
+    </entity>
+    <entity name="TestEntity" representedClassName="TestEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="ascitis" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="esplenomegalia" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="fatiga" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="nivelBulimia" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="numeroPrueba" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="resultado" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="paciente" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PacienteEntity" inverseName="pruebas" inverseEntity="PacienteEntity" syncable="YES"/>
+    </entity>
+    <entity name="UsuarioEntity" representedClassName="UsuarioEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="apellido" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="correo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="dni" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="pacientes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PacienteEntity" inverseName="medico" inverseEntity="PacienteEntity" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="UsuarioEntity" positionX="-38.99609375" positionY="-131.96484375" width="128" height="135"/>
+        <element name="PacienteEntity" positionX="-42.0234375" positionY="65.98046875" width="128" height="165"/>
+        <element name="TestEntity" positionX="-37.99609375" positionY="284.98046875" width="128" height="150"/>
+    </elements>
 </model>

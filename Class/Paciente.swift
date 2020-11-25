@@ -6,4 +6,15 @@
 //  Copyright © 2020 ual. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class Paciente{
+    
+    
+    init?(){
+
+    }
+
+    
+}
+
