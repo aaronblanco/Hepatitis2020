@@ -23,6 +23,8 @@
 		935D6E9E256ED885003C2BBF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D6E9D256ED885003C2BBF /* RegisterViewController.swift */; };
 		935D6EA2256EDED9003C2BBF /* PacientesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D6EA1256EDED9003C2BBF /* PacientesTableViewController.swift */; };
 		935D6EA4256EE368003C2BBF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D6EA3256EE368003C2BBF /* SettingsViewController.swift */; };
+		935D6EA6256FCD32003C2BBF /* PacientePersonalDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D6EA5256FCD32003C2BBF /* PacientePersonalDataViewController.swift */; };
+		935D6EA8256FCD71003C2BBF /* PacienteClinicDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D6EA7256FCD71003C2BBF /* PacienteClinicDataViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		935D6E9D256ED885003C2BBF /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		935D6EA1256EDED9003C2BBF /* PacientesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacientesTableViewController.swift; sourceTree = "<group>"; };
 		935D6EA3256EE368003C2BBF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		935D6EA5256FCD32003C2BBF /* PacientePersonalDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacientePersonalDataViewController.swift; sourceTree = "<group>"; };
+		935D6EA7256FCD71003C2BBF /* PacienteClinicDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacienteClinicDataViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,8 @@
 				1500E702256EBAC1007EC947 /* AppDelegate.swift */,
 				1500E704256EBAC1007EC947 /* LoginViewController.swift */,
 				1500E706256EBAC1007EC947 /* Main.storyboard */,
+				935D6EA7256FCD71003C2BBF /* PacienteClinicDataViewController.swift */,
+				935D6EA5256FCD32003C2BBF /* PacientePersonalDataViewController.swift */,
 				935D6EA3256EE368003C2BBF /* SettingsViewController.swift */,
 				935D6EA1256EDED9003C2BBF /* PacientesTableViewController.swift */,
 				1500E70C256EBAC6007EC947 /* Assets.xcassets */,
@@ -305,9 +311,11 @@
 				1500E743256ED01B007EC947 /* Usuario.swift in Sources */,
 				935D6EA4256EE368003C2BBF /* SettingsViewController.swift in Sources */,
 				935D6E9E256ED885003C2BBF /* RegisterViewController.swift in Sources */,
+				935D6EA8256FCD71003C2BBF /* PacienteClinicDataViewController.swift in Sources */,
 				1500E70B256EBAC1007EC947 /* Hepatitis2020.xcdatamodeld in Sources */,
 				1500E748256ED027007EC947 /* DataBaseService.swift in Sources */,
 				1500E705256EBAC1007EC947 /* LoginViewController.swift in Sources */,
+				935D6EA6256FCD32003C2BBF /* PacientePersonalDataViewController.swift in Sources */,
 				935D6EA2256EDED9003C2BBF /* PacientesTableViewController.swift in Sources */,
 				1500E703256EBAC1007EC947 /* AppDelegate.swift in Sources */,
 			);
