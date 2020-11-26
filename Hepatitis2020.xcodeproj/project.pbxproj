@@ -21,6 +21,8 @@
 		1500E74A256ED32D007EC947 /* Paciente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500E749256ED32D007EC947 /* Paciente.swift */; };
 		935D6E9A256ECCAE003C2BBF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 935D6E99256ECCAE003C2BBF /* .gitignore */; };
 		935D6E9E256ED885003C2BBF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D6E9D256ED885003C2BBF /* RegisterViewController.swift */; };
+		935D6EA2256EDED9003C2BBF /* PacientesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D6EA1256EDED9003C2BBF /* PacientesTableViewController.swift */; };
+		935D6EA4256EE368003C2BBF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D6EA3256EE368003C2BBF /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		1500E749256ED32D007EC947 /* Paciente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paciente.swift; sourceTree = "<group>"; };
 		935D6E99256ECCAE003C2BBF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		935D6E9D256ED885003C2BBF /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		935D6EA1256EDED9003C2BBF /* PacientesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacientesTableViewController.swift; sourceTree = "<group>"; };
+		935D6EA3256EE368003C2BBF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,8 @@
 				1500E702256EBAC1007EC947 /* AppDelegate.swift */,
 				1500E704256EBAC1007EC947 /* LoginViewController.swift */,
 				1500E706256EBAC1007EC947 /* Main.storyboard */,
+				935D6EA3256EE368003C2BBF /* SettingsViewController.swift */,
+				935D6EA1256EDED9003C2BBF /* PacientesTableViewController.swift */,
 				1500E70C256EBAC6007EC947 /* Assets.xcassets */,
 				1500E70E256EBAC6007EC947 /* LaunchScreen.storyboard */,
 				1500E711256EBAC6007EC947 /* Info.plist */,
@@ -297,10 +303,12 @@
 				1500E744256ED01B007EC947 /* Prueba.swift in Sources */,
 				1500E74A256ED32D007EC947 /* Paciente.swift in Sources */,
 				1500E743256ED01B007EC947 /* Usuario.swift in Sources */,
+				935D6EA4256EE368003C2BBF /* SettingsViewController.swift in Sources */,
 				935D6E9E256ED885003C2BBF /* RegisterViewController.swift in Sources */,
 				1500E70B256EBAC1007EC947 /* Hepatitis2020.xcdatamodeld in Sources */,
 				1500E748256ED027007EC947 /* DataBaseService.swift in Sources */,
 				1500E705256EBAC1007EC947 /* LoginViewController.swift in Sources */,
+				935D6EA2256EDED9003C2BBF /* PacientesTableViewController.swift in Sources */,
 				1500E703256EBAC1007EC947 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

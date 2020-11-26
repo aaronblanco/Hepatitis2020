@@ -53,13 +53,7 @@ class LoginViewController: UIViewController {
     }
     
     
-    @IBAction func register(_ sender: UIButton) {
-        
-    
-        
-        
-    }
-    
+ 
     
     
     

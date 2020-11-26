@@ -29,9 +29,6 @@ class RegisterViewController: UIViewController {
     @IBAction func registrarDoctor(_ sender: UIButton) {
     }
     
-    
-    @IBAction func cancelar(_ sender: UIButton) {
-    }
-    
+  
 
 }
