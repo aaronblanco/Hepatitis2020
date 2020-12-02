@@ -68,7 +68,7 @@
                                 <rect key="frame" x="227" y="563" width="30" height="30"/>
                                 <state key="normal" title="aqui"/>
                                 <connections>
-                                    <segue destination="ayh-HG-m3V" kind="presentation" id="1PQ-5t-swh"/>
+                                    <segue destination="ayh-HG-m3V" kind="presentation" identifier="registerView" id="1PQ-5t-swh"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PXN-dR-NDe" userLabel="Logo">
