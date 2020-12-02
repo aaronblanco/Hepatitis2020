@@ -46,16 +46,17 @@ class RegisterViewController: UIViewController {
             displayAlert(userMessage: "Las contraseñas no coinciden.");
             return;
         }
-        UserDefaults.standard.set(userNombre, forKey:"nombre");
+        // Falta introducir los datos en la BD.
+        //UserDefaults.standard.set(userNombre, forKey:"nombre");
         
-        var alert = UIAlertController(title: "Alerta", message: "Registro completado exitosamente.", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Alerta", message: "Registro completado exitosamente.", preferredStyle: UIAlertController.Style.alert)
         
         let registerAction = UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default){
             action in
             self.dismiss(animated: true, completion: nil);
         }
         alert.addAction(registerAction);
-        self.presentedViewController(alert, animated: true, completition: nil);
+        self.present(alert, animated: true, completion: nil);
         
         
         
@@ -65,13 +66,13 @@ class RegisterViewController: UIViewController {
     
     
     func displayAlert(userMessage:String){
-        var alert = UIAlertController(title: "Alerta", message: userMessage, preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Alerta", message: userMessage, preferredStyle: UIAlertController.Style.alert)
         
         let registerAction = UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default);
         
         alert.addAction(registerAction)
         
-        self.presentedViewController(alert, animated: true, completition: nil)
+        self.present(alert, animated: true, completion: nil)
         
     }
    
