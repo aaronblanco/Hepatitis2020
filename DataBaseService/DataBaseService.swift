@@ -101,5 +101,47 @@ class DataBaseService {
             print("Could not save. \(error), \(error.userInfo)")
         }
     }
+    
+    func getUsuario(nombre: String) -> NSManagedObjectID?{
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return nil}
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "LibroEntity")
+        fetchRequest.predicate = NSPredicate(format: "nombre=%@", nombre)
+        do{
+            return try managedContext.fetch(fetchRequest)[0].objectID
+        }catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+        return nil
+    }
+    
+    func updateUsuario(usuario: Usuario, nombre: String, apellidos: String, dni: String, correo: String, nuevaContraseña: String){
+        
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+            do{
+                let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "UsuarioEntity")
+                fetchRequest.predicate = NSPredicate(format: "dni=%@", usuario.dni)
+                
+                var insercion = try managedContext.fetch(fetchRequest)
+                
+                insercion[0].setValue(nombre, forKey: "estado")
+                insercion[0].setValue(apellidos, forKey: "apellidos")
+                insercion[0].setValue(dni, forKey: "dni")
+                insercion[0].setValue(correo, forKey: "correo")
+                insercion[0].setValue(nuevaContraseña, forKey: "nuevaContraseña")
+                
+                try managedContext.save()
+                
+            }  catch let error as NSError {
+                print("Could not fetch. \(error), \(error.userInfo)")
+            }
+        
+        
+    }
 
 }
