@@ -48,6 +48,9 @@ class RegisterViewController: UIViewController {
         }
         // Falta introducir los datos en la BD.
         //UserDefaults.standard.set(userNombre, forKey:"nombre");
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        // var managedObjectContext = appDelegate.managedObjectContext
+        
         
         let alert = UIAlertController(title: "Alerta", message: "Registro completado exitosamente.", preferredStyle: UIAlertController.Style.alert)
         

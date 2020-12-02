@@ -31,9 +31,64 @@ class SettingsViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func updateData(_ sender: UIButton) {
+        let userNombre = nombre.text
+        let userApellidos = apellidos.text
+        let userDni = dni.text
+        let userCorreo = correo.text
+        
+        if((userNombre?.isEmpty)! || (userApellidos?.isEmpty)! || (userDni?.isEmpty)! || (userCorreo?.isEmpty)!){
+            displayAlert(userMessage: "Se requiere rellenar todos los campos.");
+            return;
+        }
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        // var managedObjectContext = appDelegate.managedObjectContext
+        
+        
+        let alert = UIAlertController(title: "Alerta", message: "Datos modificados exitosamente.", preferredStyle: UIAlertController.Style.alert)
+        
+        let registerAction = UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default){
+            action in
+            self.dismiss(animated: true, completion: nil);
+        }
+        alert.addAction(registerAction);
+        self.present(alert, animated: true, completion: nil);
+        
+        
+        
+        
+    
+    
+    
     }
     
+    func displayAlert(userMessage:String){
+        let alert = UIAlertController(title: "Alerta", message: userMessage, preferredStyle: UIAlertController.Style.alert)
+        
+        let registerAction = UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default);
+        
+        alert.addAction(registerAction)
+        
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+
     @IBAction func updatePassword(_ sender: UIButton) {
+        let userPassword = password.text
+        let userRepeatPassword = repeatpassword.text
+        
+        if(userPassword?.isEmpty)! || (userRepeatPassword?.isEmpty)!{
+            displayAlert(userMessage: "Se requiere rellenar todos los campos.");
+            return;
+        }
+        
+        if(userPassword != userRepeatPassword){
+            displayAlert(userMessage: "Las contraseñas no coinciden.");
+            return;
+        }
+        
+        
+        
     }
     /*
     // MARK: - Navigation
