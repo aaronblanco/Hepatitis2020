@@ -101,5 +101,112 @@ class DataBaseService {
             print("Could not save. \(error), \(error.userInfo)")
         }
     }
+    
+    func updateUsuario(usuario: Usuario, nombre: String, apellidos: String, dni: String, correo: String, nuevaContraseña: String){
+        
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+            do{
+                let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "UsuarioEntity")
+                fetchRequest.predicate = NSPredicate(format: "dni=%@", usuario.dni)
+                
+                var insercion = try managedContext.fetch(fetchRequest)
+                
+                insercion[0].setValue(nombre, forKey: "nombre")
+                insercion[0].setValue(apellidos, forKey: "apellidos")
+                insercion[0].setValue(dni, forKey: "dni")
+                insercion[0].setValue(correo, forKey: "correo")
+                insercion[0].setValue(nuevaContraseña, forKey: "nuevaContraseña")
+                
+                try managedContext.save()
+                
+            }  catch let error as NSError {
+                print("Could not fetch. \(error), \(error.userInfo)")
+            }
+    }
+    
+    func updatePaciente(paciente: Paciente, nombre: String, apellidos: String, dni: String, sexo: String, fechaNacimiento: Date, imagen: UIImage){
+        
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        do{
+            let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "PacienteEntity")
+            fetchRequest.predicate = NSPredicate(format: "dni=%@", paciente.dni)
+            
+            var insercion = try managedContext.fetch(fetchRequest)
+            
+            insercion[0].setValue(nombre, forKey: "estado")
+            insercion[0].setValue(apellidos, forKey: "apellidos")
+            insercion[0].setValue(dni, forKey: "dni")
+            insercion[0].setValue(sexo, forKey: "sexo")
+            insercion[0].setValue(fechaNacimiento, forKey: "fechaNacimiento")
+            
+            let imageData = imagen.pngData()
+            insercion[0].setValue(imageData, forKey: "imagen")
+            
+            try managedContext.save()
+            
+        }  catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+    }
+    
+    
+    
+    func login(dni: String, password: String) -> Bool{
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return false }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "UsuarioEntity")
+        fetchRequest.predicate = NSPredicate(format: "dni==%@ and password==%@", dni, password)
+        
+        do {
+            if(try managedContext.fetch(fetchRequest).count > 0){
+                return true
+            }
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        
+        return false
+    }
+    
+    func crearCuenta(dni: String, password: String) -> Bool{
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return false}
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "UsuarioEntity", in: managedContext)!
+        let person = NSManagedObject(entity: entity, insertInto: managedContext)
+        
+        person.setValue(dni, forKeyPath: "dni")
+        person.setValue(password, forKey: "password")
+        
+        do {
+            try managedContext.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+        return true
+    }
+    
+    func getUsuario(dni: String) -> NSManagedObjectID?{
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return nil}
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "UsuarioEntity")
+        fetchRequest.predicate = NSPredicate(format: "dni=%@", dni)
+        do{
+            return try managedContext.fetch(fetchRequest)[0].objectID
+        }catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+        return nil
+    }
 
 }

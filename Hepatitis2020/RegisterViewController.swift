@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class RegisterViewController: UIViewController {
     
@@ -27,8 +28,56 @@ class RegisterViewController: UIViewController {
         //MARK: actions
     
     @IBAction func registrarDoctor(_ sender: UIButton) {
+        
+        let userNombre = nombre.text
+        let userApellidos = apellidos.text
+        let userDni = dni.text
+        let userCorreo = correo.text
+        let userPassword = password.text
+        let userRepeatPassword = repetirPassword.text
+        
+        
+        if((userNombre?.isEmpty)! || (userApellidos?.isEmpty)! || (userDni?.isEmpty)! || (userCorreo?.isEmpty)! || (userPassword?.isEmpty)! || (userRepeatPassword?.isEmpty)!){
+            displayAlert(userMessage: "Se requiere rellenar todos los campos.");
+            return;
+        }
+        
+        if(userPassword != userRepeatPassword){
+            displayAlert(userMessage: "Las contraseñas no coinciden.");
+            return;
+        }
+        // Falta introducir los datos en la BD.
+        //UserDefaults.standard.set(userNombre, forKey:"nombre");
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        // var managedObjectContext = appDelegate.managedObjectContext
+        
+        
+        let alert = UIAlertController(title: "Alerta", message: "Registro completado exitosamente.", preferredStyle: UIAlertController.Style.alert)
+        
+        let registerAction = UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default){
+            action in
+            self.dismiss(animated: true, completion: nil);
+        }
+        alert.addAction(registerAction);
+        self.present(alert, animated: true, completion: nil);
+        
+        
+        
+        
     }
     
-  
-
+    
+    
+    func displayAlert(userMessage:String){
+        let alert = UIAlertController(title: "Alerta", message: userMessage, preferredStyle: UIAlertController.Style.alert)
+        
+        let registerAction = UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default);
+        
+        alert.addAction(registerAction)
+        
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+   
+    
 }
