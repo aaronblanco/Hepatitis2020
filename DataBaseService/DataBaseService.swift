@@ -12,7 +12,7 @@ import CoreData
 class DataBaseService {
 
     
-    func llenarDataBase_User(usuario: Usuario){
+    func Add_Usuario(usuario: Usuario){
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
         
@@ -35,7 +35,7 @@ class DataBaseService {
             
             if( !usuario.pacientes.isEmpty){
                 for paciente in usuario.pacientes {
-                    llenarDataBase_Paciente(usuario: insercion, paciente: paciente)
+                    Add_Paciente(usuario: insercion, paciente: paciente)
                 }
             }
             
@@ -48,7 +48,7 @@ class DataBaseService {
         }
     }
     
-    func llenarDataBase_Paciente(usuario: NSObject, paciente: Paciente){
+    func Add_Paciente(usuario: NSObject, paciente: Paciente){
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
         
@@ -70,7 +70,7 @@ class DataBaseService {
             
             if( !paciente.pruebas.isEmpty){
                 for prueba in paciente.pruebas {
-                    llenarDataBase_Prueba(paciente: insercion, prueba: prueba)
+                    Add_Prueba(paciente: insercion, prueba: prueba)
                 }
             }
             
@@ -80,7 +80,7 @@ class DataBaseService {
         }
     }
     
-    func llenarDataBase_Prueba(paciente: NSObject, prueba: Prueba){
+    func Add_Prueba(paciente: NSObject, prueba: Prueba){
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
         
@@ -157,8 +157,105 @@ class DataBaseService {
         }
     }
     
+    func getUsuario(dni: String) -> NSManagedObjectID?{
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return nil}
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "UsuarioEntity")
+        fetchRequest.predicate = NSPredicate(format: "dni=%@", dni)
+        do{
+            return try managedContext.fetch(fetchRequest)[0].objectID
+        }catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+        return nil
+    }
     
+    func getDatos_Usuario(id_usuario: NSManagedObjectID) -> [Paciente]?{
+        var resultado = [Paciente]()
+        var consultaInternaPrueba = [Prueba]()
+        var fotoAux: UIImage?
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return nil
+        }
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "UsuarioEntity")
+        
+        
+        do {
+            let usuario = try managedContext .existingObject(with: id_usuario)
+            fetchRequest.predicate = NSPredicate(format: "medico=%@", usuario)
+            let sortPaciente = NSSortDescriptor(key: "nombre", ascending: true)
+            fetchRequest.sortDescriptors = [sortPaciente]
+            
+           
+            
+            
+            let pacientes = try managedContext.fetch(fetchRequest)
+            
+            for paciente in pacientes {
+                
+                let fetchRequestPruebas = NSFetchRequest<NSManagedObject>(entityName: "PruebaEntity")
+                fetchRequestPruebas.predicate = NSPredicate(format: "paciente=%@", paciente)
+                let sortPrueba = NSSortDescriptor(key: "numeroPrueba", ascending: false)
+                fetchRequestPruebas.sortDescriptors = [sortPrueba]
+                let pruebas = try managedContext.fetch(fetchRequestPruebas)
+                
+                
+                
+                consultaInternaPrueba.removeAll()
+                for prueba in pruebas {
+                    
+
+                    
+                    consultaInternaPrueba.append(Prueba(fatiga: prueba.value(forKey: "fatiga") as! Int, esplenomegalia: prueba.value(forKey: "esplenomegalia") as! Int, ascitis: prueba.value(forKey: "ascitis") as! Int, nivelBulimia: prueba.value(forKey: "nivelBulimia") as! Int, numeroPrueba: prueba.value(forKey: "numeroPrueba") as! Int, resultado: prueba.value(forKey: "resultado") as! Int))
+
+                    
+                }
+                
+                if let imageData = paciente.value(forKey: "imagen") as? NSData {
+                    if let image = UIImage(data: Data(referencing: imageData)) {
+                        fotoAux = image
+                    }
+                }
+                
+                
+                resultado.append(Paciente(nombre: paciente.value(forKey: "nombre") as! String, apellido: paciente.value(forKey: "apellido") as! String, dni: paciente.value(forKey: "dni") as! String, sexo: paciente.value(forKey: "sexo") as! String, fechaNacimiento: paciente.value(forKey: "fechaNacimiento") as! Date, foto: fotoAux, pruebas: consultaInternaPrueba))
+                
+            }
+            
+            return resultado
+            
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        return nil
+    }
+
     
+    func BD_IsEmpty() -> Bool
+    {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return false}
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "UsuarioEntity")
+        
+        do {
+            
+            if try managedContext.fetch(fetchRequest).count < 1{
+                return true
+            }else{
+                return false
+            }
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        
+        return false
+        
+    }
+
     func login(dni: String, password: String) -> Bool{
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return false }
         
@@ -177,36 +274,7 @@ class DataBaseService {
         return false
     }
     
-    func crearCuenta(dni: String, password: String) -> Bool{
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return false}
-        
-        let managedContext = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "UsuarioEntity", in: managedContext)!
-        let person = NSManagedObject(entity: entity, insertInto: managedContext)
-        
-        person.setValue(dni, forKeyPath: "dni")
-        person.setValue(password, forKey: "password")
-        
-        do {
-            try managedContext.save()
-        } catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
-        }
-        return true
-    }
     
-    func getUsuario(dni: String) -> NSManagedObjectID?{
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return nil}
-        
-        let managedContext = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "UsuarioEntity")
-        fetchRequest.predicate = NSPredicate(format: "dni=%@", dni)
-        do{
-            return try managedContext.fetch(fetchRequest)[0].objectID
-        }catch let error as NSError {
-            print("Could not save. \(error), \(error.userInfo)")
-        }
-        return nil
-    }
+
 
 }
