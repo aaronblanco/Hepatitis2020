@@ -106,8 +106,9 @@
 				935D6E99256ECCAE003C2BBF /* .gitignore */,
 				1500E740256ECF88007EC947 /* DataBaseService */,
 				1500E701256EBAC1007EC947 /* Hepatitis2020 */,
-				1500E719256EBAC6007EC947 /* Hepatitis2020Tests */,
+				150EF2682581521B0088EAF4 /* ViewControllers */,
 				1500E734256EBBE5007EC947 /* Class */,
+				1500E719256EBAC6007EC947 /* Hepatitis2020Tests */,
 				1500E724256EBAC7007EC947 /* Hepatitis2020UITests */,
 				1500E700256EBAC1007EC947 /* Products */,
 			);
@@ -126,20 +127,11 @@
 		1500E701256EBAC1007EC947 /* Hepatitis2020 */ = {
 			isa = PBXGroup;
 			children = (
-				935D6E9D256ED885003C2BBF /* RegisterViewController.swift */,
 				1500E702256EBAC1007EC947 /* AppDelegate.swift */,
-				1500E704256EBAC1007EC947 /* LoginViewController.swift */,
 				1500E706256EBAC1007EC947 /* Main.storyboard */,
-				930A501F25814C6700EB20C6 /* PacientePerfilViewController.swift */,
-				935D6EA7256FCD71003C2BBF /* PacienteClinicDataViewController.swift */,
-				935D6EA5256FCD32003C2BBF /* PacientePersonalDataViewController.swift */,
-				935D6EA3256EE368003C2BBF /* SettingsViewController.swift */,
-				935D6EA1256EDED9003C2BBF /* PacientesTableViewController.swift */,
 				1500E70C256EBAC6007EC947 /* Assets.xcassets */,
 				1500E70E256EBAC6007EC947 /* LaunchScreen.storyboard */,
 				1500E711256EBAC6007EC947 /* Info.plist */,
-				1500E709256EBAC1007EC947 /* Hepatitis2020.xcdatamodeld */,
-				930A501D2578168800EB20C6 /* PacienteTableViewCell.swift */,
 			);
 			path = Hepatitis2020;
 			sourceTree = "<group>";
@@ -176,8 +168,24 @@
 			isa = PBXGroup;
 			children = (
 				1500E746256ED027007EC947 /* DataBaseService.swift */,
+				1500E709256EBAC1007EC947 /* Hepatitis2020.xcdatamodeld */,
 			);
 			path = DataBaseService;
+			sourceTree = "<group>";
+		};
+		150EF2682581521B0088EAF4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				935D6EA3256EE368003C2BBF /* SettingsViewController.swift */,
+				935D6EA1256EDED9003C2BBF /* PacientesTableViewController.swift */,
+				930A501D2578168800EB20C6 /* PacienteTableViewCell.swift */,
+				935D6EA5256FCD32003C2BBF /* PacientePersonalDataViewController.swift */,
+				935D6EA7256FCD71003C2BBF /* PacienteClinicDataViewController.swift */,
+				930A501F25814C6700EB20C6 /* PacientePerfilViewController.swift */,
+				1500E704256EBAC1007EC947 /* LoginViewController.swift */,
+				935D6E9D256ED885003C2BBF /* RegisterViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
