@@ -11,6 +11,7 @@ import UIKit
 class PacienteTableViewCell: UITableViewCell {
 
     
+    @IBOutlet weak var apellidos: UILabel!
     @IBOutlet weak var nombre: UILabel!
     @IBOutlet weak var dni: UILabel!
     @IBOutlet weak var fotoPerfil: UIImageView!
