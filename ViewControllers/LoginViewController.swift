@@ -72,7 +72,7 @@ class LoginViewController: UIViewController {
     func iniciarAplicacion(){
         if(DataBaseService().BD_IsEmpty()){
             
-            let prueba = Prueba(fatiga: 100, esplenomegalia: 100, ascitis: 100, nivelBulimia: 100, numeroPrueba: 100, resultado: 0)
+            let prueba = Prueba(fatiga: 100, esplenomegalia: 100, ascitis: 100, nivelBulimia: 100, numeroPrueba: 100, resultado: 100)
             
             let paciente = Paciente(nombre: "admin", apellido: "istrador delforo", dni: "00000001A", sexo: "Hombre", fechaNacimiento: Date(), foto: #imageLiteral(resourceName: "PacienteDefecto"), pruebas: [prueba])
             let usuario = Usuario(dni: "00000001A", pass: "admin", nombre: "admin", apellidos: "istrador delforo", correo: "admin@gmukil.com", pacientes: [paciente])

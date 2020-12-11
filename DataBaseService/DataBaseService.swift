@@ -68,6 +68,7 @@ class DataBaseService {
             insercion.setValue(paciente.nombre, forKey: "nombre")
             insercion.setValue(paciente.sexo, forKey: "sexo")
             
+            insercion.setValue(usuario, forKey: "medico")
             if( !paciente.pruebas.isEmpty){
                 for prueba in paciente.pruebas {
                     Add_Prueba(paciente: insercion, prueba: prueba)
@@ -95,7 +96,7 @@ class DataBaseService {
             insercion.setValue(prueba.nivelBulimia, forKey: "nivelBulimia")
             insercion.setValue(prueba.numeroPrueba, forKey: "numeroPrueba")
             insercion.setValue(prueba.resultado, forKey: "resultado")
-            
+            insercion.setValue(paciente, forKey: "paciente")
             try managedContext.save()
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
@@ -177,7 +178,7 @@ class DataBaseService {
         let managedContext = appDelegate.persistentContainer.viewContext
         do{
             let fetchRequest = try managedContext .existingObject(with: key)
-
+            
             ////toDo
             return Usuario(dni: "admin", pass: "admin", nombre: nil, apellidos: nil, correo: nil, pacientes: nil)
         }catch let error as NSError {
@@ -198,6 +199,7 @@ class DataBaseService {
         
         do {
             let usuario = try managedContext .existingObject(with: id_usuario)
+            
             let fetchRequestPaciente = NSFetchRequest<NSManagedObject>(entityName: "PacienteEntity")
             fetchRequestPaciente.predicate = NSPredicate(format: "medico=%@", usuario)
             

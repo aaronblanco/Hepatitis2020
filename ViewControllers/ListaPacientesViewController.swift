@@ -17,22 +17,28 @@ class ListaPacientesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+        tableView.delegate = self
+        tableView.dataSource = self
+        searchBar.delegate = self
+        tableView.rowHeight = 100
+        tableView.estimatedRowHeight = 100
+        pacientesFiltrados = pacientes
     }
 
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-        let selectedRow = tableView.indexPath(for: sender as! PacienteTableViewCell)?.row
-        let viewDestiny = segue.destination as! PacientePerfilViewController
-        //viewDestiny.paciente = pacientes[selectedRow!]
         
+        if(segue.identifier == "pacientePerfil"){
+            let viewDestiny = segue.destination as! PacientePerfilViewController
+            let selectedRow = tableView.indexPath(for: sender as! TableViewCellPaciente )?.row
+            viewDestiny.paciente = pacientesFiltrados[selectedRow!]
+        }
     }
-
+    
 }
 
 extension ListaPacientesViewController: UITableViewDataSource, UITableViewDelegate{
@@ -44,7 +50,7 @@ extension ListaPacientesViewController: UITableViewDataSource, UITableViewDelega
     }
    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PacienteTableViewCell", for: indexPath) as! PacienteTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Paciente", for: indexPath) as! TableViewCellPaciente
         
         cell.apellidos.text = pacientesFiltrados[indexPath.row].apellido
         cell.nombre.text = pacientesFiltrados[indexPath.row].nombre
@@ -59,8 +65,12 @@ extension ListaPacientesViewController: UISearchBarDelegate{
     
     func searchBar(_ searchBar: UISearchBar, textDidChange search: String){
 
-            pacientesFiltrados = pacientes
-
+        pacientesFiltrados = pacientes
+        
+        if(searchBar.text?.count == 0){
+            tableView.reloadData()
+            return
+        }
         
         self.pacientesFiltrados = self.pacientes.filter{ (paciente: Paciente) -> Bool in
             if(paciente.nombre.lowercased().contains(searchBar.text!.lowercased())){
@@ -73,7 +83,6 @@ extension ListaPacientesViewController: UISearchBarDelegate{
                 return true
             }
             return false
-
         }
         
         tableView.reloadData()
