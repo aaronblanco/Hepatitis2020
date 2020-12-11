@@ -85,7 +85,7 @@ class DataBaseService {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
         
         let managedContext = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "TestEntity", in: managedContext)!
+        let entity = NSEntityDescription.entity(forEntityName: "PruebaEntity", in: managedContext)!
         let insercion = NSManagedObject(entity: entity, insertInto: managedContext)
         
         do {
@@ -171,6 +171,21 @@ class DataBaseService {
         return nil
     }
     
+    func getUsuario(key: NSManagedObjectID) -> Usuario?{
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return nil}
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        do{
+            let fetchRequest = try managedContext .existingObject(with: key)
+
+            ////toDo
+            return Usuario(dni: "admin", pass: "admin", nombre: nil, apellidos: nil, correo: nil, pacientes: nil)
+        }catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+        return nil
+    }
+    
     func getDatos_Usuario(id_usuario: NSManagedObjectID) -> [Paciente]?{
         var resultado = [Paciente]()
         var consultaInternaPrueba = [Prueba]()
@@ -180,19 +195,16 @@ class DataBaseService {
         }
         
         let managedContext = appDelegate.persistentContainer.viewContext
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "UsuarioEntity")
-        
         
         do {
             let usuario = try managedContext .existingObject(with: id_usuario)
-            fetchRequest.predicate = NSPredicate(format: "medico=%@", usuario)
+            let fetchRequestPaciente = NSFetchRequest<NSManagedObject>(entityName: "PacienteEntity")
+            fetchRequestPaciente.predicate = NSPredicate(format: "medico=%@", usuario)
+            
             let sortPaciente = NSSortDescriptor(key: "nombre", ascending: true)
-            fetchRequest.sortDescriptors = [sortPaciente]
+            fetchRequestPaciente.sortDescriptors = [sortPaciente]
             
-           
-            
-            
-            let pacientes = try managedContext.fetch(fetchRequest)
+            let pacientes = try managedContext.fetch(fetchRequestPaciente)
             
             for paciente in pacientes {
                 
