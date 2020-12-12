@@ -38,7 +38,7 @@
                                 </state>
                                 <connections>
                                     <action selector="initSesion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JiI-Kk-2Xg"/>
-                                    <segue destination="7pH-YK-0sy" kind="presentation" identifier="loginSegue" id="kya-br-awv"/>
+                                    <segue destination="7pH-YK-0sy" kind="presentation" identifier="loginSegue" modalPresentationStyle="fullScreen" id="kya-br-awv"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BoT-FG-mRz">
@@ -69,7 +69,7 @@
                                 <rect key="frame" x="227" y="563" width="30" height="30"/>
                                 <state key="normal" title="aqui"/>
                                 <connections>
-                                    <segue destination="ayh-HG-m3V" kind="presentation" identifier="crearCuenta" id="IfU-03-p7E"/>
+                                    <segue destination="ayh-HG-m3V" kind="presentation" identifier="crearCuenta" modalPresentationStyle="fullScreen" id="IfU-03-p7E"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PXN-dR-NDe" userLabel="Logo">
@@ -170,7 +170,7 @@
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Cancelar"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" id="h2y-lL-mcg"/>
+                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="h2y-lL-mcg"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="369-sB-bZP">
@@ -249,10 +249,10 @@
             </objects>
             <point key="canvasLocation" x="-2999.1999999999998" y="896.40179910044981"/>
         </scene>
-        <!--Paciente Clinic Data View Controller-->
+        <!--Add Prueba View Controller-->
         <scene sceneID="XSy-BP-DZs">
             <objects>
-                <viewController id="P2a-Zi-FtN" customClass="PacienteClinicDataViewController" customModule="Hepatitis2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="P2a-Zi-FtN" customClass="AddPruebaViewController" customModule="Hepatitis2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X3Q-pJ-Cj0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -321,32 +321,57 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5d-5J-0hT">
-                                <rect key="frame" x="49" y="579" width="59" height="30"/>
+                                <rect key="frame" x="49" y="579" width="63" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Reiniciar"/>
+                                <connections>
+                                    <action selector="limpiar:" destination="P2a-Zi-FtN" eventType="touchUpInside" id="oEj-h1-p6S"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Jx-by-YJA">
-                                <rect key="frame" x="268" y="579" width="46" height="30"/>
+                                <rect key="frame" x="252" y="579" width="62" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Enviar"/>
+                                <connections>
+                                    <action selector="enviar:" destination="P2a-Zi-FtN" eventType="touchUpInside" id="dtl-dF-SqA"/>
+                                </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fIx-80-PQD">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="k9L-il-lqj">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="jFD-IV-gGM">
+                                            <connections>
+                                                <action selector="cancel:" destination="P2a-Zi-FtN" id="nQO-ib-nQ3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Elm-UF-7vb"/>
                     </view>
+                    <connections>
+                        <outlet property="ascitis" destination="X4H-lf-mrx" id="B19-FT-Tiq"/>
+                        <outlet property="bulimia" destination="rii-zX-Xgi" id="tpV-d5-n4P"/>
+                        <outlet property="esple" destination="siL-tS-nSj" id="MTU-AK-OIY"/>
+                        <outlet property="fatiga" destination="NMy-Ns-fPp" id="3To-hK-iTR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NNG-kM-LAP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="188" y="-271.21439280359823"/>
         </scene>
-        <!--Paciente Personal Data View Controller-->
+        <!--Add Paciente View Controller-->
         <scene sceneID="S6E-5G-3uH">
             <objects>
-                <viewController id="xS5-9X-sQQ" customClass="PacientePersonalDataViewController" customModule="Hepatitis2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xS5-9X-sQQ" customClass="AddPacienteViewController" customModule="Hepatitis2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oON-Mi-KPn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -393,10 +418,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="duo-RF-F5D">
-                                <rect key="frame" x="186" y="126" width="160" height="110"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DNI:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWO-Tf-lar">
                                 <rect key="frame" x="32" y="242" width="34" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -424,6 +445,9 @@
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Reiniciar"/>
+                                <connections>
+                                    <action selector="limpiar:" destination="xS5-9X-sQQ" eventType="touchUpInside" id="BJ8-1o-nty"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kPI-fh-hVR">
                                 <rect key="frame" x="233" y="578" width="60" height="30"/>
@@ -431,6 +455,9 @@
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Enviar"/>
+                                <connections>
+                                    <action selector="crear:" destination="xS5-9X-sQQ" eventType="touchUpInside" id="Bis-1Z-KrP"/>
+                                </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1iH-ex-gpc">
                                 <rect key="frame" x="32" y="433" width="252" height="52"/>
@@ -455,10 +482,35 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H0O-Gd-Ddv">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="jhg-Ir-OQC">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Wna-96-vF1">
+                                            <connections>
+                                                <action selector="cancel:" destination="xS5-9X-sQQ" id="y1R-pG-A0s"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PacienteDefecto" translatesAutoresizingMaskIntoConstraints="NO" id="duo-RF-F5D">
+                                <rect key="frame" x="199" y="108" width="160" height="155"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dCg-ad-4cM"/>
                     </view>
+                    <connections>
+                        <outlet property="Apellidos" destination="ycy-IB-0kE" id="zJ6-sL-cAT"/>
+                        <outlet property="DNI" destination="YsC-jO-31N" id="D0g-JM-hyQ"/>
+                        <outlet property="date" destination="1iH-ex-gpc" id="nJa-pq-JEU"/>
+                        <outlet property="foto" destination="duo-RF-F5D" id="9un-b4-dN3"/>
+                        <outlet property="nombre" destination="pKl-AW-RVb" id="vh6-OE-hnF"/>
+                        <outlet property="sexo" destination="GxF-iI-oYt" id="DJc-bh-AKI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhP-mh-iqE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -574,10 +626,10 @@
             </objects>
             <point key="canvasLocation" x="188" y="434.93253373313348"/>
         </scene>
-        <!--Paciente Perfil View Controller-->
+        <!--Paciente View Controller-->
         <scene sceneID="fNd-ph-HGw">
             <objects>
-                <viewController id="1Dc-GM-VUe" customClass="PacientePerfilViewController" customModule="Hepatitis2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1Dc-GM-VUe" customClass="PacienteViewController" customModule="Hepatitis2020" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N19-t2-uDe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -679,7 +731,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="P2a-Zi-FtN" kind="presentation" id="fCz-Kf-fAi"/>
+                                    <segue destination="P2a-Zi-FtN" kind="presentation" modalPresentationStyle="fullScreen" id="Fao-bM-kUb"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Añadir test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0Q-DS-OH2">
@@ -708,7 +760,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Title" id="scJ-OW-NSU">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="a7a-FG-4qm"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="a7a-FG-4qm">
+                                            <connections>
+                                                <action selector="cancel:" destination="1Dc-GM-VUe" id="uzu-p5-yVQ"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -758,12 +814,12 @@
                                             <navigationItem title="Pacientes" id="8AU-lH-XcN">
                                                 <barButtonItem key="leftBarButtonItem" systemItem="edit" id="aVu-Py-e4P">
                                                     <connections>
-                                                        <segue destination="oaA-ZZ-BV3" kind="presentation" identifier="editar" id="baX-VR-YWD"/>
+                                                        <segue destination="oaA-ZZ-BV3" kind="presentation" identifier="editar" modalPresentationStyle="fullScreen" id="baX-VR-YWD"/>
                                                     </connections>
                                                 </barButtonItem>
                                                 <barButtonItem key="rightBarButtonItem" systemItem="add" id="reL-ke-4SZ">
                                                     <connections>
-                                                        <segue destination="xS5-9X-sQQ" kind="presentation" identifier="añadir" id="t6v-Kg-Bao"/>
+                                                        <segue destination="xS5-9X-sQQ" kind="presentation" identifier="añadir" modalPresentationStyle="fullScreen" id="t6v-Kg-Bao"/>
                                                     </connections>
                                                 </barButtonItem>
                                             </navigationItem>
@@ -820,7 +876,7 @@
                                             <outlet property="dni" destination="81c-m2-YDM" id="OYY-g6-b1q"/>
                                             <outlet property="fotoPerfil" destination="9Pu-SI-1lM" id="WOt-x8-NQu"/>
                                             <outlet property="nombre" destination="Xmf-cP-w5h" id="qzU-44-NaF"/>
-                                            <segue destination="1Dc-GM-VUe" kind="presentation" identifier="pacientePerfil" id="bFz-fl-qOO"/>
+                                            <segue destination="1Dc-GM-VUe" kind="presentation" identifier="pacientePerfil" modalPresentationStyle="fullScreen" id="bFz-fl-qOO"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -867,13 +923,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DNI:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnX-0Z-1aC">
-                                <rect key="frame" x="25" y="242" width="34" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cambiar contraseña" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhD-Ld-zVV">
                                 <rect key="frame" x="110" y="436" width="155" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -909,15 +958,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uHu-IT-jNq">
-                                <rect key="frame" x="23" y="271" width="328" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HPb-1L-j0w">
-                                <rect key="frame" x="25" y="338" width="326" height="30"/>
+                                <rect key="frame" x="23" y="279" width="326" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -937,16 +979,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OiS-xs-Zbr">
-                                <rect key="frame" x="254" y="376" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Editar datos"/>
-                                <connections>
-                                    <action selector="updateData:" destination="oaA-ZZ-BV3" eventType="touchUpInside" id="0D4-As-puS"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T5z-oq-ODu">
                                 <rect key="frame" x="179" y="556" width="138" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -958,12 +990,35 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Correo electrónico" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXx-5F-5Kl">
-                                <rect key="frame" x="25" y="309" width="143" height="21"/>
+                                <rect key="frame" x="25" y="250" width="143" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sfq-6e-k4c">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="SJf-Sa-r2T">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mOD-p2-g7z">
+                                            <connections>
+                                                <action selector="cancel:" destination="oaA-ZZ-BV3" id="gZ4-Jn-gET"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OiS-xs-Zbr">
+                                <rect key="frame" x="250" y="330" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Editar datos"/>
+                                <connections>
+                                    <action selector="updateData:" destination="oaA-ZZ-BV3" eventType="touchUpInside" id="0D4-As-puS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="lli-FZ-87y"/>
@@ -971,7 +1026,6 @@
                     <connections>
                         <outlet property="apellidos" destination="z6R-Ie-wXJ" id="tDm-Id-fjy"/>
                         <outlet property="correo" destination="HPb-1L-j0w" id="aRP-SD-6qI"/>
-                        <outlet property="dni" destination="uHu-IT-jNq" id="0CR-ZP-Fkh"/>
                         <outlet property="nombre" destination="PFA-6b-o0l" id="jwo-WL-YC9"/>
                         <outlet property="password" destination="aHE-OY-J86" id="0Wj-bT-ogE"/>
                         <outlet property="repeatpassword" destination="bTM-Wr-zMr" id="U2K-C2-pU4"/>

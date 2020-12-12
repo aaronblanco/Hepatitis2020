@@ -46,12 +46,7 @@ class RegisterViewController: UIViewController {
             displayAlert(userMessage: "Las contraseñas no coinciden.");
             return;
         }
-        // Falta introducir los datos en la BD.
-        //UserDefaults.standard.set(userNombre, forKey:"nombre");
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        // var managedObjectContext = appDelegate.managedObjectContext
-        
-        
+       
         let alert = UIAlertController(title: "Alerta", message: "Registro completado exitosamente.", preferredStyle: UIAlertController.Style.alert)
         
         let registerAction = UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default){
@@ -59,11 +54,10 @@ class RegisterViewController: UIViewController {
             self.dismiss(animated: true, completion: nil);
         }
         alert.addAction(registerAction);
+        
+        DataBaseService().Add_Usuario(usuario: Usuario(dni: userDni!, pass: userPassword!, nombre: userNombre!, apellidos: userApellidos!, correo: userCorreo!, pacientes: nil))
+        
         self.present(alert, animated: true, completion: nil);
-        
-        
-        
-        
     }
     
     

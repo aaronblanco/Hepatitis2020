@@ -26,17 +26,32 @@ class ListaPacientesViewController: UIViewController {
         searchBar.delegate = self
         tableView.rowHeight = 100
         tableView.estimatedRowHeight = 100
-        pacientesFiltrados = pacientes
+        
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+         pacientes = DataBaseService().getDatos_Usuario(id_usuario: DataBaseService().getUsuario(dni: usuario.dni)!)!
+        pacientesFiltrados = pacientes
+        usuario.pacientes = pacientes
+        tableView.reloadData()
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if(segue.identifier == "pacientePerfil"){
-            let viewDestiny = segue.destination as! PacientePerfilViewController
+            let viewDestiny = segue.destination as! PacienteViewController
             let selectedRow = tableView.indexPath(for: sender as! TableViewCellPaciente )?.row
             viewDestiny.paciente = pacientesFiltrados[selectedRow!]
         }
+        if(segue.identifier == "añadir"){
+            let viewDestiny = segue.destination as! AddPacienteViewController
+            viewDestiny.usuario = usuario
+        }
+        if(segue.identifier == "editar"){
+            let ViewDestiny = segue.destination as! SettingsViewController
+            ViewDestiny.usuario = usuario
+        }
+        
     }
     
 }

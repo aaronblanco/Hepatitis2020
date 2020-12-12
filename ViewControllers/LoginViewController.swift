@@ -64,7 +64,6 @@ class LoginViewController: UIViewController {
         if(segue.identifier == "loginSegue"){
             let viewDestiny = segue.destination as! ListaPacientesViewController
             
-            viewDestiny.pacientes = DataBaseService().getDatos_Usuario(id_usuario: DataBaseService().getUsuario(dni: self.dni.text!)!)!
             viewDestiny.usuario = DataBaseService().getUsuario(key: DataBaseService().getUsuario(dni: self.dni.text!)!)
         }
     }

@@ -13,9 +13,9 @@ class Prueba {
     var ascitis: Int
     var nivelBulimia: Int
     var numeroPrueba: Int
-    var resultado: Int
+    var resultado: Double
     
-    init(fatiga:Int, esplenomegalia:Int, ascitis:Int, nivelBulimia:Int, numeroPrueba:Int, resultado: Int){
+    init(fatiga:Int, esplenomegalia:Int, ascitis:Int, nivelBulimia:Int, numeroPrueba:Int, resultado: Double){
         self.fatiga = fatiga
         self.esplenomegalia = esplenomegalia
         self.ascitis = ascitis

@@ -12,10 +12,9 @@ class SettingsViewController: UIViewController {
 
     
     //MARK: properties
-    
+    var usuario: Usuario!
     @IBOutlet weak var nombre: UITextField!
     @IBOutlet weak var apellidos: UITextField!
-    @IBOutlet weak var dni: UITextField!
     @IBOutlet weak var correo: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var repeatpassword: UITextField!
@@ -26,6 +25,9 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func cancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
     
     //MARK: - Actions
@@ -33,17 +35,15 @@ class SettingsViewController: UIViewController {
     @IBAction func updateData(_ sender: UIButton) {
         let userNombre = nombre.text
         let userApellidos = apellidos.text
-        let userDni = dni.text
         let userCorreo = correo.text
         
-        if((userNombre?.isEmpty)! || (userApellidos?.isEmpty)! || (userDni?.isEmpty)! || (userCorreo?.isEmpty)!){
+        if((userNombre?.isEmpty)! || (userApellidos?.isEmpty)! || (userCorreo?.isEmpty)!){
             displayAlert(userMessage: "Se requiere rellenar todos los campos.");
             return;
         }
-        
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
         // var managedObjectContext = appDelegate.managedObjectContext
         
+        DataBaseService().updateUsuario(usuario: usuario, nombre: nombre.text!, apellidos: apellidos.text!, correo: correo.text!, nuevaContraseña: usuario.password)
         
         let alert = UIAlertController(title: "Alerta", message: "Datos modificados exitosamente.", preferredStyle: UIAlertController.Style.alert)
         
@@ -53,13 +53,7 @@ class SettingsViewController: UIViewController {
         }
         alert.addAction(registerAction);
         self.present(alert, animated: true, completion: nil);
-        
-        
-        
-        
-    
-    
-    
+         
     }
     
     func displayAlert(userMessage:String){
@@ -86,7 +80,9 @@ class SettingsViewController: UIViewController {
             displayAlert(userMessage: "Las contraseñas no coinciden.");
             return;
         }
+        DataBaseService().updateUsuario(usuario: usuario, nombre: usuario.nombre!, apellidos: usuario.apellidos!, correo: usuario.correo!, nuevaContraseña: userPassword!)
         
+        displayAlert(userMessage: "La contraseña ha sido cambiada exitosamente")
         
         
     }

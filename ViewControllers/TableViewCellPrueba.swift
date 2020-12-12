@@ -32,7 +32,7 @@ class TableViewCellPrueba: UITableViewCell {
         let actionDismiss = UIAlertAction(title: "Cerrar", style: .cancel)
         alert.addAction(actionDismiss)
         
-        alert.message = /*String(resultado)+*/"%"
+        alert.message = String(resultado)+"%"
         
         viewcontroller.present(alert, animated: true, completion: nil)
    
