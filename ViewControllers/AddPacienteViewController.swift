@@ -42,8 +42,10 @@ class AddPacienteViewController: UIViewController {
         
         
     }
+    
     @IBAction func crear(_ sender: Any) {
         DataBaseService().Add_Paciente(usuario: usuario, paciente: Paciente(nombre: nombre.text!, apellido: Apellidos.text!, dni: DNI.text!, sexo: indexSeleccted(), fechaNacimiento: date.date, foto: foto.image, pruebas: nil))
+        cancel(self)
     }
     
     func indexSeleccted() -> String{

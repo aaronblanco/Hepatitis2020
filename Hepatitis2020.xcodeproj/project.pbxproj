@@ -21,6 +21,25 @@
 		1500E74A256ED32D007EC947 /* Paciente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500E749256ED32D007EC947 /* Paciente.swift */; };
 		15017C33258404A100A666CD /* TableViewCellPaciente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15017C32258404A100A666CD /* TableViewCellPaciente.swift */; };
 		15017C352584077400A666CD /* TableViewCellPrueba.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15017C342584077400A666CD /* TableViewCellPrueba.swift */; };
+		15541ED2258A7ECC008D7B59 /* TableViewCellPaciente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15017C32258404A100A666CD /* TableViewCellPaciente.swift */; };
+		15541ED3258A7ECC008D7B59 /* Prueba.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500E742256ED01B007EC947 /* Prueba.swift */; };
+		15541ED4258A7ECC008D7B59 /* Paciente.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500E749256ED32D007EC947 /* Paciente.swift */; };
+		15541ED5258A7ECC008D7B59 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500E741256ED01B007EC947 /* Usuario.swift */; };
+		15541ED6258A7ECC008D7B59 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D6EA3256EE368003C2BBF /* SettingsViewController.swift */; };
+		15541ED7258A7ECC008D7B59 /* TableViewCellPrueba.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15017C342584077400A666CD /* TableViewCellPrueba.swift */; };
+		15541ED8258A7ECC008D7B59 /* PacienteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930A501F25814C6700EB20C6 /* PacienteViewController.swift */; };
+		15541ED9258A7ECC008D7B59 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D6E9D256ED885003C2BBF /* RegisterViewController.swift */; };
+		15541EDA258A7ECC008D7B59 /* AddPruebaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D6EA7256FCD71003C2BBF /* AddPruebaViewController.swift */; };
+		15541EDB258A7ECC008D7B59 /* Hepatitis2020.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1500E709256EBAC1007EC947 /* Hepatitis2020.xcdatamodeld */; };
+		15541EDC258A7ECC008D7B59 /* DataBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500E746256ED027007EC947 /* DataBaseService.swift */; };
+		15541EDD258A7ECC008D7B59 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500E704256EBAC1007EC947 /* LoginViewController.swift */; };
+		15541EDE258A7ECC008D7B59 /* AddPacienteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D6EA5256FCD32003C2BBF /* AddPacienteViewController.swift */; };
+		15541EDF258A7ECC008D7B59 /* ListaPacientesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D6EA1256EDED9003C2BBF /* ListaPacientesViewController.swift */; };
+		15541EE0258A7ECC008D7B59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1500E702256EBAC1007EC947 /* AppDelegate.swift */; };
+		15541EE3258A7ECC008D7B59 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 935D6E99256ECCAE003C2BBF /* .gitignore */; };
+		15541EE4258A7ECC008D7B59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1500E70E256EBAC6007EC947 /* LaunchScreen.storyboard */; };
+		15541EE5258A7ECC008D7B59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1500E70C256EBAC6007EC947 /* Assets.xcassets */; };
+		15541EE6258A7ECC008D7B59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1500E706256EBAC1007EC947 /* Main.storyboard */; };
 		930A502025814C6700EB20C6 /* PacienteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930A501F25814C6700EB20C6 /* PacienteViewController.swift */; };
 		935D6E9A256ECCAE003C2BBF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 935D6E99256ECCAE003C2BBF /* .gitignore */; };
 		935D6E9E256ED885003C2BBF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D6E9D256ED885003C2BBF /* RegisterViewController.swift */; };
@@ -48,7 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1500E6FF256EBAC1007EC947 /* Hepatitis2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hepatitis2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1500E6FF256EBAC1007EC947 /* Hepatitis2020 1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hepatitis2020 1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1500E702256EBAC1007EC947 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1500E704256EBAC1007EC947 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1500E707256EBAC1007EC947 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,6 +87,8 @@
 		1500E749256ED32D007EC947 /* Paciente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paciente.swift; sourceTree = "<group>"; };
 		15017C32258404A100A666CD /* TableViewCellPaciente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellPaciente.swift; sourceTree = "<group>"; };
 		15017C342584077400A666CD /* TableViewCellPrueba.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellPrueba.swift; sourceTree = "<group>"; };
+		15541EEA258A7ECC008D7B59 /* Hepatitis2020 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hepatitis2020 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		15541EEB258A7ECC008D7B59 /* Hepatitis2020 copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Hepatitis2020 copy-Info.plist"; path = "/Users/bruno/Desktop/Hepatitis2020/Hepatitis2020 copy-Info.plist"; sourceTree = "<absolute>"; };
 		930A501F25814C6700EB20C6 /* PacienteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacienteViewController.swift; sourceTree = "<group>"; };
 		935D6E99256ECCAE003C2BBF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		935D6E9D256ED885003C2BBF /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +120,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		15541EE1258A7ECC008D7B59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -113,15 +141,17 @@
 				1500E719256EBAC6007EC947 /* Hepatitis2020Tests */,
 				1500E724256EBAC7007EC947 /* Hepatitis2020UITests */,
 				1500E700256EBAC1007EC947 /* Products */,
+				15541EEB258A7ECC008D7B59 /* Hepatitis2020 copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		1500E700256EBAC1007EC947 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1500E6FF256EBAC1007EC947 /* Hepatitis2020.app */,
+				1500E6FF256EBAC1007EC947 /* Hepatitis2020 1.app */,
 				1500E716256EBAC6007EC947 /* Hepatitis2020Tests.xctest */,
 				1500E721256EBAC7007EC947 /* Hepatitis2020UITests.xctest */,
+				15541EEA258A7ECC008D7B59 /* Hepatitis2020 2.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -194,9 +224,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1500E6FE256EBAC1007EC947 /* Hepatitis2020 */ = {
+		1500E6FE256EBAC1007EC947 /* Hepatitis2020 1 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1500E72A256EBAC7007EC947 /* Build configuration list for PBXNativeTarget "Hepatitis2020" */;
+			buildConfigurationList = 1500E72A256EBAC7007EC947 /* Build configuration list for PBXNativeTarget "Hepatitis2020 1" */;
 			buildPhases = (
 				1500E6FB256EBAC1007EC947 /* Sources */,
 				1500E6FC256EBAC1007EC947 /* Frameworks */,
@@ -206,9 +236,9 @@
 			);
 			dependencies = (
 			);
-			name = Hepatitis2020;
+			name = "Hepatitis2020 1";
 			productName = Hepatitis2020;
-			productReference = 1500E6FF256EBAC1007EC947 /* Hepatitis2020.app */;
+			productReference = 1500E6FF256EBAC1007EC947 /* Hepatitis2020 1.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1500E715256EBAC6007EC947 /* Hepatitis2020Tests */ = {
@@ -247,6 +277,23 @@
 			productReference = 1500E721256EBAC7007EC947 /* Hepatitis2020UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		15541ED0258A7ECC008D7B59 /* Hepatitis2020 2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 15541EE7258A7ECC008D7B59 /* Build configuration list for PBXNativeTarget "Hepatitis2020 2" */;
+			buildPhases = (
+				15541ED1258A7ECC008D7B59 /* Sources */,
+				15541EE1258A7ECC008D7B59 /* Frameworks */,
+				15541EE2258A7ECC008D7B59 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Hepatitis2020 2";
+			productName = Hepatitis2020;
+			productReference = 15541EEA258A7ECC008D7B59 /* Hepatitis2020 2.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -283,9 +330,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1500E6FE256EBAC1007EC947 /* Hepatitis2020 */,
+				1500E6FE256EBAC1007EC947 /* Hepatitis2020 1 */,
 				1500E715256EBAC6007EC947 /* Hepatitis2020Tests */,
 				1500E720256EBAC7007EC947 /* Hepatitis2020UITests */,
+				15541ED0258A7ECC008D7B59 /* Hepatitis2020 2 */,
 			);
 		};
 /* End PBXProject section */
@@ -313,6 +361,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		15541EE2258A7ECC008D7B59 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15541EE3258A7ECC008D7B59 /* .gitignore in Resources */,
+				15541EE4258A7ECC008D7B59 /* LaunchScreen.storyboard in Resources */,
+				15541EE5258A7ECC008D7B59 /* Assets.xcassets in Resources */,
+				15541EE6258A7ECC008D7B59 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,17 +416,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		15541ED1258A7ECC008D7B59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				15541ED2258A7ECC008D7B59 /* TableViewCellPaciente.swift in Sources */,
+				15541ED3258A7ECC008D7B59 /* Prueba.swift in Sources */,
+				15541ED4258A7ECC008D7B59 /* Paciente.swift in Sources */,
+				15541ED5258A7ECC008D7B59 /* Usuario.swift in Sources */,
+				15541ED6258A7ECC008D7B59 /* SettingsViewController.swift in Sources */,
+				15541ED7258A7ECC008D7B59 /* TableViewCellPrueba.swift in Sources */,
+				15541ED8258A7ECC008D7B59 /* PacienteViewController.swift in Sources */,
+				15541ED9258A7ECC008D7B59 /* RegisterViewController.swift in Sources */,
+				15541EDA258A7ECC008D7B59 /* AddPruebaViewController.swift in Sources */,
+				15541EDB258A7ECC008D7B59 /* Hepatitis2020.xcdatamodeld in Sources */,
+				15541EDC258A7ECC008D7B59 /* DataBaseService.swift in Sources */,
+				15541EDD258A7ECC008D7B59 /* LoginViewController.swift in Sources */,
+				15541EDE258A7ECC008D7B59 /* AddPacienteViewController.swift in Sources */,
+				15541EDF258A7ECC008D7B59 /* ListaPacientesViewController.swift in Sources */,
+				15541EE0258A7ECC008D7B59 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		1500E718256EBAC6007EC947 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1500E6FE256EBAC1007EC947 /* Hepatitis2020 */;
+			target = 1500E6FE256EBAC1007EC947 /* Hepatitis2020 1 */;
 			targetProxy = 1500E717256EBAC6007EC947 /* PBXContainerItemProxy */;
 		};
 		1500E723256EBAC7007EC947 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 1500E6FE256EBAC1007EC947 /* Hepatitis2020 */;
+			target = 1500E6FE256EBAC1007EC947 /* Hepatitis2020 1 */;
 			targetProxy = 1500E722256EBAC7007EC947 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -448,7 +529,7 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG LPS2";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -521,6 +602,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = ual.Hepatitis2020;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "LPS1 DEBUG";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -622,6 +704,42 @@
 			};
 			name = Release;
 		};
+		15541EE8258A7ECC008D7B59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S95C8MLNT8;
+				INFOPLIST_FILE = "Hepatitis2020 copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ual.Hepatitis2020;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		15541EE9258A7ECC008D7B59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S95C8MLNT8;
+				INFOPLIST_FILE = "Hepatitis2020 copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ual.Hepatitis2020;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -634,7 +752,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1500E72A256EBAC7007EC947 /* Build configuration list for PBXNativeTarget "Hepatitis2020" */ = {
+		1500E72A256EBAC7007EC947 /* Build configuration list for PBXNativeTarget "Hepatitis2020 1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1500E72B256EBAC7007EC947 /* Debug */,
@@ -657,6 +775,15 @@
 			buildConfigurations = (
 				1500E731256EBAC7007EC947 /* Debug */,
 				1500E732256EBAC7007EC947 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		15541EE7258A7ECC008D7B59 /* Build configuration list for PBXNativeTarget "Hepatitis2020 2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				15541EE8258A7ECC008D7B59 /* Debug */,
+				15541EE9258A7ECC008D7B59 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
