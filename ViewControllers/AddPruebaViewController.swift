@@ -68,7 +68,6 @@ class AddPruebaViewController: UIViewController {
         #if LPS2
             return Calculo()
         #endif
-        return -1;
     }
     
     func indexSeleccted() -> Double{

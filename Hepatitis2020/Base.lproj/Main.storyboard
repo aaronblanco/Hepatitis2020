@@ -13,24 +13,24 @@
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Hepatitis2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Hepatitis2020_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="DNI:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKP-Qc-O24">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="DNI:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NKP-Qc-O24">
                                 <rect key="frame" x="77" y="322" width="34" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Contraseña:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udp-yz-FI1">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Contraseña:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udp-yz-FI1">
                                 <rect key="frame" x="77" y="391" width="93" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpq-d4-aGJ">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpq-d4-aGJ">
                                 <rect key="frame" x="142" y="466" width="91" height="30"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Iniciar Sesión">
@@ -41,19 +41,19 @@
                                     <segue destination="7pH-YK-0sy" kind="presentation" identifier="loginSegue" modalPresentationStyle="fullScreen" id="kya-br-awv"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BoT-FG-mRz">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BoT-FG-mRz">
                                 <rect key="frame" x="77" y="354" width="230" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uPl-r7-LUM">
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uPl-r7-LUM">
                                 <rect key="frame" x="77" y="421" width="230" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="¿Aún no te has registrado?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFA-TN-ZHv">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="¿Aún no te has registrado?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFA-TN-ZHv">
                                 <rect key="frame" x="77" y="539" width="204" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -65,15 +65,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zii-fR-fJo">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zii-fR-fJo">
                                 <rect key="frame" x="227" y="563" width="30" height="30"/>
                                 <state key="normal" title="aqui"/>
                                 <connections>
                                     <segue destination="ayh-HG-m3V" kind="presentation" identifier="crearCuenta" modalPresentationStyle="fullScreen" id="IfU-03-p7E"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PXN-dR-NDe" userLabel="Logo">
-                                <rect key="frame" x="67" y="136" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Hepatitis-App" translatesAutoresizingMaskIntoConstraints="NO" id="PXN-dR-NDe" userLabel="Logo">
+                                <rect key="frame" x="67" y="83" width="240" height="181"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -94,7 +94,7 @@
                             <constraint firstItem="NKP-Qc-O24" firstAttribute="leading" secondItem="BoT-FG-mRz" secondAttribute="leading" id="WNn-PH-AQy"/>
                             <constraint firstItem="Zec-6h-ipo" firstAttribute="top" secondItem="nFA-TN-ZHv" secondAttribute="bottom" constant="8" symbolic="YES" id="WTV-jV-KEx"/>
                             <constraint firstItem="Udp-yz-FI1" firstAttribute="top" secondItem="BoT-FG-mRz" secondAttribute="bottom" constant="7" id="WpV-VH-AM7"/>
-                            <constraint firstItem="PXN-dR-NDe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="116" id="YIp-GB-e7L"/>
+                            <constraint firstItem="PXN-dR-NDe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="YIp-GB-e7L"/>
                             <constraint firstItem="NKP-Qc-O24" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="YJV-rc-k9E"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zii-fR-fJo" secondAttribute="bottom" constant="74" id="be8-ER-jaX"/>
                             <constraint firstItem="nFA-TN-ZHv" firstAttribute="top" secondItem="mpq-d4-aGJ" secondAttribute="bottom" constant="43" id="gaU-6J-49a"/>
@@ -111,12 +111,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2998" y="53"/>
+            <point key="canvasLocation" x="-2999.1999999999998" y="52.623688155922046"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="lSp-jL-tKy">
             <objects>
-                <viewController id="ayh-HG-m3V" customClass="RegisterViewController" customModule="Hepatitis2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ayh-HG-m3V" customClass="RegisterViewController" customModule="Hepatitis2020_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p7T-XE-QxC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -252,7 +252,7 @@
         <!--Add Prueba View Controller-->
         <scene sceneID="XSy-BP-DZs">
             <objects>
-                <viewController id="P2a-Zi-FtN" customClass="AddPruebaViewController" customModule="Hepatitis2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="P2a-Zi-FtN" customClass="AddPruebaViewController" customModule="Hepatitis2020_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X3Q-pJ-Cj0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -389,7 +389,7 @@
         <!--Add Paciente View Controller-->
         <scene sceneID="S6E-5G-3uH">
             <objects>
-                <viewController id="xS5-9X-sQQ" customClass="AddPacienteViewController" customModule="Hepatitis2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="xS5-9X-sQQ" customClass="AddPacienteViewController" customModule="Hepatitis2020_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oON-Mi-KPn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -537,7 +537,7 @@
         <!--Paciente View Controller-->
         <scene sceneID="fNd-ph-HGw">
             <objects>
-                <viewController id="1Dc-GM-VUe" customClass="PacienteViewController" customModule="Hepatitis2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1Dc-GM-VUe" customClass="PacienteViewController" customModule="Hepatitis2020_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N19-t2-uDe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -579,7 +579,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Prueba" id="PfS-PS-5jg" customClass="TableViewCellPrueba" customModule="Hepatitis2020" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Prueba" id="PfS-PS-5jg" customClass="TableViewCellPrueba" customModule="Hepatitis2020_1" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PfS-PS-5jg" id="z7X-eY-4h6">
@@ -707,7 +707,7 @@
         <!--Lista Pacientes View Controller-->
         <scene sceneID="lRN-KA-vWt">
             <objects>
-                <viewController id="7pH-YK-0sy" customClass="ListaPacientesViewController" customModule="Hepatitis2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7pH-YK-0sy" customClass="ListaPacientesViewController" customModule="Hepatitis2020_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qU0-en-7Dp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -745,7 +745,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Paciente" rowHeight="99" id="LRW-3H-rbR" customClass="TableViewCellPaciente" customModule="Hepatitis2020" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Paciente" rowHeight="99" id="LRW-3H-rbR" customClass="TableViewCellPaciente" customModule="Hepatitis2020_1" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="99"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LRW-3H-rbR" id="F7O-iN-j5n">
@@ -805,7 +805,7 @@
         <!--Settings View Controller-->
         <scene sceneID="euG-Fm-51h">
             <objects>
-                <viewController id="oaA-ZZ-BV3" customClass="SettingsViewController" customModule="Hepatitis2020" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="oaA-ZZ-BV3" customClass="SettingsViewController" customModule="Hepatitis2020_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LE7-kg-3Et">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -945,6 +945,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Hepatitis-App" width="1300" height="1300"/>
         <image name="PacienteDefecto" width="112" height="112"/>
     </resources>
 </document>
