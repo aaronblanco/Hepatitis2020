@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddPacienteViewController: UIViewController {
+class AddPacienteViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var usuario: Usuario!
     
@@ -41,6 +41,24 @@ class AddPacienteViewController: UIViewController {
         self.sexo.selectedSegmentIndex = 0
         
         
+    }
+    
+    
+    @IBAction func seleccionarImagen(_ sender: UITapGestureRecognizer) {
+        let picker = UIImagePickerController()
+        picker.allowsEditing = true
+        picker.sourceType = .photoLibrary
+        picker.delegate = self
+        present(picker, animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        foto.image = info[.originalImage] as? UIImage
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func crear(_ sender: Any) {

@@ -521,6 +521,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhP-mh-iqE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="E6C-7A-ajX">
+                    <connections>
+                        <action selector="seleccionarImagen:" destination="xS5-9X-sQQ" id="ZVk-hm-0IB"/>
+                        <outlet property="delegate" destination="duo-RF-F5D" id="di3-K5-krU"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1724" y="803.74812593703155"/>
         </scene>
