@@ -262,34 +262,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ascitis:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFw-8Z-pnt">
-                                <rect key="frame" x="56" y="264" width="56" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NMy-Ns-fPp">
-                                <rect key="frame" x="49" y="159" width="265" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="siL-tS-nSj">
-                                <rect key="frame" x="49" y="226" width="265" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X4H-lf-mrx">
-                                <rect key="frame" x="53" y="293" width="261" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rii-zX-Xgi">
                                 <rect key="frame" x="53" y="360" width="261" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -353,16 +325,50 @@
                                 </segments>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zhU-2P-chL">
+                                <rect key="frame" x="49" y="293" width="265" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Negativo"/>
+                                    <segment title="Positivo"/>
+                                </segments>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ascitis:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFw-8Z-pnt">
+                                <rect key="frame" x="49" y="264" width="56" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ptn-ab-9Lf">
+                                <rect key="frame" x="49" y="226" width="265" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Negativo"/>
+                                    <segment title="Positivo"/>
+                                </segments>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5Zw-FZ-Tw1">
+                                <rect key="frame" x="49" y="159" width="265" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Negativo"/>
+                                    <segment title="Positivo"/>
+                                </segments>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Elm-UF-7vb"/>
                     </view>
                     <connections>
                         <outlet property="ResultadoInput" destination="TEl-Oi-81S" id="mAQ-JK-e41"/>
-                        <outlet property="ascitis" destination="X4H-lf-mrx" id="B19-FT-Tiq"/>
-                        <outlet property="bulimia" destination="rii-zX-Xgi" id="tpV-d5-n4P"/>
-                        <outlet property="esple" destination="siL-tS-nSj" id="MTU-AK-OIY"/>
-                        <outlet property="fatiga" destination="NMy-Ns-fPp" id="3To-hK-iTR"/>
+                        <outlet property="albumina" destination="rii-zX-Xgi" id="tpV-d5-n4P"/>
+                        <outlet property="ascitis" destination="zhU-2P-chL" id="0i5-VF-a6b"/>
+                        <outlet property="esple" destination="Ptn-ab-9Lf" id="Vh1-cK-a5J"/>
+                        <outlet property="fatiga" destination="5Zw-FZ-Tw1" id="GtA-lP-i0l"/>
                         <outlet property="labelResultado" destination="VkF-AI-S6F" id="2mR-Nn-91Z"/>
                     </connections>
                 </viewController>
@@ -563,7 +569,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Prueba" id="PfS-PS-5jg" customClass="TableViewCellPrueba" customModule="Hepatitis2020_1" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Prueba" id="PfS-PS-5jg" customClass="TableViewCellPrueba" customModule="Hepatitis2020_1" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PfS-PS-5jg" id="z7X-eY-4h6">
@@ -729,7 +735,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Paciente" rowHeight="99" id="LRW-3H-rbR" customClass="TableViewCellPaciente" customModule="Hepatitis2020_1" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Paciente" rowHeight="99" id="LRW-3H-rbR" customClass="TableViewCellPaciente" customModule="Hepatitis2020_1" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="99"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LRW-3H-rbR" id="F7O-iN-j5n">
@@ -929,7 +935,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Hepatitis-App" width="1300" height="1300"/>
-        <image name="PacienteDefecto" width="112" height="112"/>
+        <image name="Hepatitis-App" width="312" height="312"/>
+        <image name="PacienteDefecto" width="224" height="224"/>
     </resources>
 </document>

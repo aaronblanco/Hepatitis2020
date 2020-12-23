@@ -44,7 +44,18 @@ class AddPacienteViewController: UIViewController {
     }
     
     @IBAction func crear(_ sender: Any) {
+        
+        
+        
+        if((nombre.text?.isEmpty)! || (Apellidos.text?.isEmpty)! || (DNI.text?.isEmpty)! ){
+            displayAlert(userMessage: "Se requiere rellenar todos los campos.");
+            return;
+            
+        }
+        
+
         DataBaseService().Add_Paciente(usuario: usuario, paciente: Paciente(nombre: nombre.text!, apellido: Apellidos.text!, dni: DNI.text!, sexo: indexSeleccted(), fechaNacimiento: date.date, foto: foto.image, pruebas: nil))
+        
         cancel(self)
     }
     
@@ -54,4 +65,17 @@ class AddPacienteViewController: UIViewController {
         }
         return "Mujer"
     }
+    
+    func displayAlert(userMessage:String){
+        let alert = UIAlertController(title: "Alerta", message: userMessage, preferredStyle: UIAlertController.Style.alert)
+        
+        let registerAction = UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default);
+        
+        alert.addAction(registerAction)
+        
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+
+    
 }

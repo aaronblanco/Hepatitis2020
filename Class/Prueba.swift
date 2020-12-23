@@ -8,18 +8,18 @@
 
 import UIKit
 class Prueba {
-    var fatiga: Int
-    var esplenomegalia: Int
-    var ascitis: Int
-    var nivelBulimia: Int
+    var fatiga: Bool
+    var esplenomegalia: Bool
+    var ascitis: Bool
+    var nivelAlbumina: Double
     var numeroPrueba: Int
     var resultado: Double
     
-    init(fatiga:Int, esplenomegalia:Int, ascitis:Int, nivelBulimia:Int, numeroPrueba:Int, resultado: Double){
+    init(fatiga:Bool, esplenomegalia:Bool, ascitis:Bool, Nivelalbumina:Double, numeroPrueba:Int, resultado: Double){
         self.fatiga = fatiga
         self.esplenomegalia = esplenomegalia
         self.ascitis = ascitis
-        self.nivelBulimia = nivelBulimia
+        self.nivelAlbumina = Double(Nivelalbumina)
         self.numeroPrueba = numeroPrueba
         self.resultado = resultado
     }

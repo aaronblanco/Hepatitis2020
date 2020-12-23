@@ -132,7 +132,7 @@ class DataBaseService {
             insercion.setValue(prueba.ascitis, forKey: "ascitis")
             insercion.setValue(prueba.esplenomegalia, forKey: "esplenomegalia")
             insercion.setValue(prueba.fatiga, forKey: "fatiga")
-            insercion.setValue(prueba.nivelBulimia, forKey: "nivelBulimia")
+            insercion.setValue(prueba.nivelAlbumina, forKey: "nivelBulimia")
             insercion.setValue(prueba.numeroPrueba, forKey: "numeroPrueba")
             insercion.setValue(prueba.resultado, forKey: "resultado")
             insercion.setValue(paciente, forKey: "paciente")
@@ -157,7 +157,7 @@ class DataBaseService {
             insercion.setValue(prueba.ascitis, forKey: "ascitis")
             insercion.setValue(prueba.esplenomegalia, forKey: "esplenomegalia")
             insercion.setValue(prueba.fatiga, forKey: "fatiga")
-            insercion.setValue(prueba.nivelBulimia, forKey: "nivelBulimia")
+            insercion.setValue(prueba.nivelAlbumina, forKey: "nivelBulimia")
             insercion.setValue(prueba.numeroPrueba, forKey: "numeroPrueba")
             insercion.setValue(prueba.resultado, forKey: "resultado")
             insercion.setValue(paciente, forKey: "paciente")
@@ -267,7 +267,7 @@ class DataBaseService {
             fetchRequest.sortDescriptors = [sortPrueba]
             for prueba in pruebas {
                 
-                salida.append(Prueba(fatiga: prueba.value(forKey: "fatiga") as! Int, esplenomegalia: prueba.value(forKey: "esplenomegalia") as! Int, ascitis: prueba.value(forKey: "ascitis") as! Int, nivelBulimia: prueba.value(forKey: "nivelBulimia") as! Int, numeroPrueba: prueba.value(forKey: "numeroPrueba") as! Int, resultado: prueba.value(forKey: "resultado") as! Double))
+                salida.append(Prueba(fatiga: prueba.value(forKey: "fatiga") as! Int, esplenomegalia: prueba.value(forKey: "esplenomegalia") as! Int, ascitis: prueba.value(forKey: "ascitis") as! Int, Nivelalbumina: prueba.value(forKey: "nivelBulimia") as! Int, numeroPrueba: prueba.value(forKey: "numeroPrueba") as! Int, resultado: prueba.value(forKey: "resultado") as! Double))
             }
             
             return salida
