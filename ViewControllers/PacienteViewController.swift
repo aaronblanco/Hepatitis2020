@@ -32,8 +32,32 @@ class PacienteViewController: UIViewController {
         foto.image = paciente.foto
         tableView.delegate = self
         tableView.dataSource = self
+        let sup = calcularSuperviviencia()
+        if(sup < 0.2){
+            
+        }
+        else if(sup < 0.8 ){
+            
+        }
+        else{
+            
+        }
+        
+        
     }
     
+    func calcularSuperviviencia() -> Double{
+        var media = 0;
+        var resultado = 0.0;
+        for prueba in pruebas {
+            if(prueba.resultado == 100){
+                media = media + 1
+            }
+        }
+        resultado = Double(media)/Double(pruebas.count)
+        
+        return resultado;
+    }
 
     override func viewDidAppear(_ animated: Bool) {
         pruebas = DataBaseService().getPruebas(dni: paciente.dni)!
