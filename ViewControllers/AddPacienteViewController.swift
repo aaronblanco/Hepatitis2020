@@ -28,6 +28,8 @@ class AddPacienteViewController: UIViewController, UIImagePickerControllerDelega
         super.viewDidLoad()
         limpiar(self)
         // Do any additional setup after loading the view.
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        foto.addGestureRecognizer(tapGestureRecognizer)
     }
 
     @IBAction func cancel(_ sender: Any) {
@@ -39,18 +41,16 @@ class AddPacienteViewController: UIViewController, UIImagePickerControllerDelega
         self.Apellidos.text = ""
         self.DNI.text = ""
         self.sexo.selectedSegmentIndex = 0
-        
-        
     }
     
-    
-    @IBAction func seleccionarImagen(_ sender: UITapGestureRecognizer) {
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
         let picker = UIImagePickerController()
         picker.allowsEditing = true
         picker.sourceType = .photoLibrary
         picker.delegate = self
         present(picker, animated: true, completion: nil)
     }
+
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         dismiss(animated: true, completion: nil)
@@ -63,15 +63,12 @@ class AddPacienteViewController: UIViewController, UIImagePickerControllerDelega
     
     @IBAction func crear(_ sender: Any) {
         
-        
-        
         if((nombre.text?.isEmpty)! || (Apellidos.text?.isEmpty)! || (DNI.text?.isEmpty)! ){
             displayAlert(userMessage: "Se requiere rellenar todos los campos.");
             return;
             
         }
         
-
         DataBaseService().Add_Paciente(usuario: usuario, paciente: Paciente(nombre: nombre.text!, apellido: Apellidos.text!, dni: DNI.text!, sexo: indexSeleccted(), fechaNacimiento: date.date, foto: foto.image, pruebas: nil))
         
         cancel(self)

@@ -32,18 +32,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpq-d4-aGJ">
-                                <rect key="frame" x="671.5" y="466" width="91" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Iniciar Sesión">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="initSesion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JiI-Kk-2Xg"/>
-                                    <segue destination="7pH-YK-0sy" kind="presentation" identifier="loginSegue" modalPresentationStyle="fullScreen" id="kya-br-awv"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BoT-FG-mRz">
                                 <rect key="frame" x="77" y="354" width="230" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -84,6 +72,18 @@
                                 <rect key="frame" x="67" y="63" width="240" height="220"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mpq-d4-aGJ">
+                                <rect key="frame" x="111" y="483" width="162" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Iniciar Sesión">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="initSesion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JiI-Kk-2Xg"/>
+                                    <segue destination="7pH-YK-0sy" kind="presentation" identifier="loginSegue" modalPresentationStyle="fullScreen" id="kya-br-awv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -95,7 +95,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2999.1999999999998" y="52.623688155922046"/>
+            <point key="canvasLocation" x="-3119.1999999999998" y="41.829085457271368"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="lSp-jL-tKy">
@@ -503,7 +503,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PacienteDefecto" translatesAutoresizingMaskIntoConstraints="NO" id="duo-RF-F5D">
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="PacienteDefecto" translatesAutoresizingMaskIntoConstraints="NO" id="duo-RF-F5D">
                                 <rect key="frame" x="199" y="108" width="160" height="155"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -521,12 +521,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhP-mh-iqE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="E6C-7A-ajX">
-                    <connections>
-                        <action selector="seleccionarImagen:" destination="xS5-9X-sQQ" id="ZVk-hm-0IB"/>
-                        <outlet property="delegate" destination="duo-RF-F5D" id="di3-K5-krU"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="E6C-7A-ajX"/>
             </objects>
             <point key="canvasLocation" x="-1724" y="803.74812593703155"/>
         </scene>
@@ -575,7 +570,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Prueba" id="PfS-PS-5jg" customClass="TableViewCellPrueba" customModule="Hepatitis2020_1" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Prueba" id="PfS-PS-5jg" customClass="TableViewCellPrueba" customModule="Hepatitis2020_1" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PfS-PS-5jg" id="z7X-eY-4h6">
@@ -672,10 +667,6 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3WR-lH-jKR">
-                                <rect key="frame" x="249" y="227" width="86" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DNI Paciente" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDz-VM-hsg">
                                 <rect key="frame" x="31" y="209" width="190" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -683,6 +674,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sz5-9p-NCq" customClass="SupervivenciaComponentController" customModule="Hepatitis2020_1" customModuleProvider="target">
+                                <rect key="frame" x="249" y="227" width="86" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94117647059999998" green="1" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="dlW-kw-0FD"/>
@@ -691,7 +687,7 @@
                         <outlet property="apellidos" destination="VgB-o5-d4S" id="Sfn-JO-mpw"/>
                         <outlet property="dni" destination="aDz-VM-hsg" id="dFV-ob-teD"/>
                         <outlet property="foto" destination="8Ue-kS-jyG" id="eWU-od-VNq"/>
-                        <outlet property="imagenSuperviviencia" destination="3WR-lH-jKR" id="KEM-qN-aSZ"/>
+                        <outlet property="imagenSuperviviencia" destination="Sz5-9p-NCq" id="yaR-GA-7m1"/>
                         <outlet property="nombre" destination="daj-ot-Kej" id="LMv-vb-8su"/>
                         <outlet property="tableView" destination="fJi-lc-l2y" id="Yyo-CD-63P"/>
                     </connections>
@@ -741,7 +737,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Paciente" rowHeight="99" id="LRW-3H-rbR" customClass="TableViewCellPaciente" customModule="Hepatitis2020_1" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="Paciente" rowHeight="99" id="LRW-3H-rbR" customClass="TableViewCellPaciente" customModule="Hepatitis2020_1" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="99"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LRW-3H-rbR" id="F7O-iN-j5n">
@@ -941,7 +937,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Hepatitis-App" width="312" height="312"/>
-        <image name="PacienteDefecto" width="224" height="224"/>
+        <image name="Hepatitis-App" width="1300" height="1300"/>
+        <image name="PacienteDefecto" width="112" height="112"/>
     </resources>
 </document>

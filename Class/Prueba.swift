@@ -13,9 +13,9 @@ class Prueba {
     var ascitis: Bool
     var nivelAlbumina: Double
     var numeroPrueba: Int
-    var resultado: Double
+    var resultado: Bool
     
-    init(fatiga:Bool, esplenomegalia:Bool, ascitis:Bool, Nivelalbumina:Double, numeroPrueba:Int, resultado: Double){
+    init(fatiga:Bool, esplenomegalia:Bool, ascitis:Bool, Nivelalbumina:Double, numeroPrueba:Int, resultado: Bool){
         self.fatiga = fatiga
         self.esplenomegalia = esplenomegalia
         self.ascitis = ascitis

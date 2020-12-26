@@ -40,6 +40,8 @@
 		15541EE4258A7ECC008D7B59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1500E70E256EBAC6007EC947 /* LaunchScreen.storyboard */; };
 		15541EE5258A7ECC008D7B59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1500E70C256EBAC6007EC947 /* Assets.xcassets */; };
 		15541EE6258A7ECC008D7B59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1500E706256EBAC1007EC947 /* Main.storyboard */; };
+		157F38402597A3BB0016A554 /* Supervivencia.xib in Resources */ = {isa = PBXBuildFile; fileRef = 157F383F2597A3BB0016A554 /* Supervivencia.xib */; };
+		157F38422597A3E60016A554 /* SupervivenciaComponentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157F38412597A3E60016A554 /* SupervivenciaComponentController.swift */; };
 		930A502025814C6700EB20C6 /* PacienteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930A501F25814C6700EB20C6 /* PacienteViewController.swift */; };
 		935D6E9A256ECCAE003C2BBF /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 935D6E99256ECCAE003C2BBF /* .gitignore */; };
 		935D6E9E256ED885003C2BBF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935D6E9D256ED885003C2BBF /* RegisterViewController.swift */; };
@@ -89,6 +91,8 @@
 		15017C342584077400A666CD /* TableViewCellPrueba.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellPrueba.swift; sourceTree = "<group>"; };
 		15541EEA258A7ECC008D7B59 /* Hepatitis2020 2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hepatitis2020 2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15541EEB258A7ECC008D7B59 /* Hepatitis2020 copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Hepatitis2020 copy-Info.plist"; path = "/Users/bruno/Desktop/Hepatitis2020/Hepatitis2020 copy-Info.plist"; sourceTree = "<absolute>"; };
+		157F383F2597A3BB0016A554 /* Supervivencia.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Supervivencia.xib; sourceTree = "<group>"; };
+		157F38412597A3E60016A554 /* SupervivenciaComponentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupervivenciaComponentController.swift; sourceTree = "<group>"; };
 		930A501F25814C6700EB20C6 /* PacienteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacienteViewController.swift; sourceTree = "<group>"; };
 		935D6E99256ECCAE003C2BBF /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		935D6E9D256ED885003C2BBF /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 				935D6E99256ECCAE003C2BBF /* .gitignore */,
 				1500E740256ECF88007EC947 /* DataBaseService */,
 				1500E701256EBAC1007EC947 /* Hepatitis2020 */,
+				157F383E2597A3950016A554 /* Custom Components */,
 				150EF2682581521B0088EAF4 /* ViewControllers */,
 				1500E734256EBBE5007EC947 /* Class */,
 				1500E719256EBAC6007EC947 /* Hepatitis2020Tests */,
@@ -219,6 +224,15 @@
 				15017C342584077400A666CD /* TableViewCellPrueba.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		157F383E2597A3950016A554 /* Custom Components */ = {
+			isa = PBXGroup;
+			children = (
+				157F383F2597A3BB0016A554 /* Supervivencia.xib */,
+				157F38412597A3E60016A554 /* SupervivenciaComponentController.swift */,
+			);
+			path = "Custom Components";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +361,7 @@
 				1500E710256EBAC6007EC947 /* LaunchScreen.storyboard in Resources */,
 				1500E70D256EBAC6007EC947 /* Assets.xcassets in Resources */,
 				1500E708256EBAC1007EC947 /* Main.storyboard in Resources */,
+				157F38402597A3BB0016A554 /* Supervivencia.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +409,7 @@
 				1500E70B256EBAC1007EC947 /* Hepatitis2020.xcdatamodeld in Sources */,
 				1500E748256ED027007EC947 /* DataBaseService.swift in Sources */,
 				1500E705256EBAC1007EC947 /* LoginViewController.swift in Sources */,
+				157F38422597A3E60016A554 /* SupervivenciaComponentController.swift in Sources */,
 				935D6EA6256FCD32003C2BBF /* AddPacienteViewController.swift in Sources */,
 				935D6EA2256EDED9003C2BBF /* ListaPacientesViewController.swift in Sources */,
 				1500E703256EBAC1007EC947 /* AppDelegate.swift in Sources */,

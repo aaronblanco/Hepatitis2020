@@ -55,7 +55,7 @@ class AddPruebaViewController: UIViewController {
         }
         do{
         let albu = Double(self.albumina.text!)
-            if(albu! >= 0.0){
+            if(albu! > 5.0 || albu! < 0){
                 displayAlert(userMessage: "El nivel de albumina en sangre no es correcto.");
                 return;
             }
@@ -75,7 +75,8 @@ class AddPruebaViewController: UIViewController {
             asc = true;
         }
         let albu = Double(self.albumina.text!)
-        DataBaseService().Add_Prueba(paciente: paciente, prueba: Prueba(fatiga: fat, esplenomegalia:espl, ascitis: asc, Nivelalbumina: albu!, numeroPrueba: paciente.pruebas.count, resultado: calcularResultado( _fat: fat, _esple: espl,  _asc: asc,  _albu: albu!)))
+        DataBaseService().Add_Prueba(paciente: paciente, prueba: Prueba(fatiga: fat, esplenomegalia:espl, ascitis: asc, Nivelalbumina: albu!, numeroPrueba: paciente.pruebas.count+1, resultado: calcularResultado( _fat: fat, _esple: espl,  _asc: asc,  _albu: albu!)))
+        
         cancel(self)
         
         
@@ -83,7 +84,7 @@ class AddPruebaViewController: UIViewController {
         //TODO popUp. Calcular
     }
     
-    func calcularResultado(_fat: Bool, _esple: Bool, _asc: Bool, _albu: Double) -> Double{
+    func calcularResultado(_fat: Bool, _esple: Bool, _asc: Bool, _albu: Double) -> Bool{
        
         #if LPS1
             return indexSeleccted()
@@ -93,37 +94,37 @@ class AddPruebaViewController: UIViewController {
         #endif
     }
     
-    func indexSeleccted() -> Double{
+    func indexSeleccted() -> Bool{
         if(ResultadoInput.selectedSegmentIndex==0){
-            return 100
+            return true
         }
-        return 0
+        return false
     }
     
-    func Calculo(_fat: Bool, _esple: Bool, _asc: Bool, _albu: Double)->Double{
+    func Calculo(_fat: Bool, _esple: Bool, _asc: Bool, _albu: Double)->Bool{
         if(_asc==false  && _esple==false){
-            return 0;
+            return false;
         }
         if(_albu > 3.7){
-            return 0;
+            return false;
         }
         if(paciente.sexo == "Mujer" && _albu <= 2.8){
-            return 100;
+            return true;
         }
         if(paciente.sexo == "Mujer" && _albu > 3.1){
-            return 100;
+            return true;
         }
         if(paciente.sexo == "Mujer" && _asc==false){
-            return 0;
+            return false;
         }
         if(paciente.sexo == "Mujer" && _albu <= 2.9){
-            return 0;
+            return false;
         }
         if(paciente.sexo == "Mujer"){
-            return 100;
+            return true;
         }
         
-        return 0;
+        return false;
     }
     
     

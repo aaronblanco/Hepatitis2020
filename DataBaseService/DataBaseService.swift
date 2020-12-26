@@ -126,6 +126,7 @@ class DataBaseService {
         let ascit: Int!
         let esple: Int!
         let fatig: Int!
+        let result: Int!
         if(prueba.ascitis == true){
             ascit = 1
         }else{
@@ -144,13 +145,18 @@ class DataBaseService {
             fatig = 0
         }
         
+        if(prueba.resultado == true){
+            result = 1
+        }else{
+            result = 0
+        }
         do {
             insercion.setValue(ascit, forKey: "ascitis")
             insercion.setValue(esple, forKey: "esplenomegalia")
             insercion.setValue(fatig, forKey: "fatiga")
             insercion.setValue(prueba.nivelAlbumina, forKey: "nivelAlbumina")
             insercion.setValue(prueba.numeroPrueba, forKey: "numeroPrueba")
-            insercion.setValue(prueba.resultado, forKey: "resultado")
+            insercion.setValue(result, forKey: "resultado")
             insercion.setValue(paciente, forKey: "paciente")
             try managedContext.save()
         } catch let error as NSError {
@@ -276,7 +282,7 @@ class DataBaseService {
         var fatig: Bool
         var espleno: Bool
         var ascit: Bool
-        
+        var result: Bool
         do{
             fetchPaciente.predicate = NSPredicate(format: "dni=%@", dni)
             let paciente = try? managedContext.fetch(fetchPaciente)[0]
@@ -290,8 +296,9 @@ class DataBaseService {
                 fatig = prueba.value(forKey: "fatiga") as! Int == 1
                 espleno = prueba.value(forKey: "esplenomegalia") as! Int == 1
                 ascit = prueba.value(forKey: "ascitis") as! Int == 1
+                result = prueba.value(forKey: "resultado") as! Int == 1
                 
-                salida.append(Prueba(fatiga: fatig, esplenomegalia: espleno, ascitis: ascit, Nivelalbumina: prueba.value(forKey: "nivelAlbumina") as! Double, numeroPrueba: prueba.value(forKey: "numeroPrueba") as! Int, resultado: prueba.value(forKey: "resultado") as! Double))
+                salida.append(Prueba(fatiga: fatig, esplenomegalia: espleno, ascitis: ascit, Nivelalbumina: prueba.value(forKey: "nivelAlbumina") as! Double, numeroPrueba: prueba.value(forKey: "numeroPrueba") as! Int, resultado: result))
             }
             
             return salida

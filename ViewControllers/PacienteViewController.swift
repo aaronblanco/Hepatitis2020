@@ -18,11 +18,10 @@ class PacienteViewController: UIViewController {
     @IBOutlet weak var apellidos: UILabel!
     @IBOutlet weak var dni: UILabel!
     @IBOutlet weak var foto: UIImageView!
-    @IBOutlet weak var imagenSuperviviencia: UIImageView!
+    
+    @IBOutlet weak var imagenSuperviviencia: SupervivenciaComponentController!
     
     @IBOutlet weak var tableView: UITableView!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,36 +31,13 @@ class PacienteViewController: UIViewController {
         foto.image = paciente.foto
         tableView.delegate = self
         tableView.dataSource = self
-        let sup = calcularSuperviviencia()
-        if(sup < 0.2){
-            
-        }
-        else if(sup < 0.8 ){
-            
-        }
-        else{
-            
-        }
-        
-        
-    }
-    
-    func calcularSuperviviencia() -> Double{
-        var media = 0;
-        var resultado = 0.0;
-        for prueba in pruebas {
-            if(prueba.resultado == 100){
-                media = media + 1
-            }
-        }
-        resultado = Double(media)/Double(pruebas.count)
-        
-        return resultado;
     }
 
     override func viewDidAppear(_ animated: Bool) {
         pruebas = DataBaseService().getPruebas(dni: paciente.dni)!
         paciente.pruebas = pruebas
+        imagenSuperviviencia.setImage(pruebas: pruebas)
+        imagenSuperviviencia.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         tableView.reloadData()
     }
     
@@ -89,7 +65,12 @@ extension PacienteViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Prueba", for: indexPath) as! TableViewCellPrueba
         cell.numero.text = String(pruebas[indexPath.row].numeroPrueba)
-        cell.resultado = Double(pruebas[indexPath.row].resultado)
+        if(pruebas[indexPath.row].resultado == true){
+            cell.resultado = "Sobrevive"
+        }else{
+            cell.resultado = "Fallece"
+        }
+        
         
         cell.viewcontroller = self
         
