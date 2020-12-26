@@ -38,11 +38,7 @@ class DataBaseService {
                     Add_Paciente(usuario: insercion, paciente: paciente)
                 }
             }
-            
-            
-            
-            
-            try managedContext.save()
+         try managedContext.save()
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
@@ -127,12 +123,32 @@ class DataBaseService {
         let managedContext = appDelegate.persistentContainer.viewContext
         let entity = NSEntityDescription.entity(forEntityName: "PruebaEntity", in: managedContext)!
         let insercion = NSManagedObject(entity: entity, insertInto: managedContext)
+        let ascit: Int!
+        let esple: Int!
+        let fatig: Int!
+        if(prueba.ascitis == true){
+            ascit = 1
+        }else{
+            ascit = 0
+        }
+        
+        if(prueba.esplenomegalia == true){
+            esple = 1
+        }else{
+            esple = 0
+        }
+        
+        if(prueba.fatiga == true){
+            fatig = 1
+        }else{
+            fatig = 0
+        }
         
         do {
-            insercion.setValue(prueba.ascitis, forKey: "ascitis")
-            insercion.setValue(prueba.esplenomegalia, forKey: "esplenomegalia")
-            insercion.setValue(prueba.fatiga, forKey: "fatiga")
-            insercion.setValue(prueba.nivelAlbumina, forKey: "nivelBulimia")
+            insercion.setValue(ascit, forKey: "ascitis")
+            insercion.setValue(esple, forKey: "esplenomegalia")
+            insercion.setValue(fatig, forKey: "fatiga")
+            insercion.setValue(prueba.nivelAlbumina, forKey: "nivelAlbumina")
             insercion.setValue(prueba.numeroPrueba, forKey: "numeroPrueba")
             insercion.setValue(prueba.resultado, forKey: "resultado")
             insercion.setValue(paciente, forKey: "paciente")
@@ -157,7 +173,7 @@ class DataBaseService {
             insercion.setValue(prueba.ascitis, forKey: "ascitis")
             insercion.setValue(prueba.esplenomegalia, forKey: "esplenomegalia")
             insercion.setValue(prueba.fatiga, forKey: "fatiga")
-            insercion.setValue(prueba.nivelAlbumina, forKey: "nivelBulimia")
+            insercion.setValue(prueba.nivelAlbumina, forKey: "nivelAlbumina")
             insercion.setValue(prueba.numeroPrueba, forKey: "numeroPrueba")
             insercion.setValue(prueba.resultado, forKey: "resultado")
             insercion.setValue(paciente, forKey: "paciente")
@@ -256,6 +272,11 @@ class DataBaseService {
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "PruebaEntity")
         let fetchPaciente = NSFetchRequest<NSManagedObject>(entityName: "PacienteEntity")
         
+        
+        var fatig: Bool
+        var espleno: Bool
+        var ascit: Bool
+        
         do{
             fetchPaciente.predicate = NSPredicate(format: "dni=%@", dni)
             let paciente = try? managedContext.fetch(fetchPaciente)[0]
@@ -266,8 +287,11 @@ class DataBaseService {
             let sortPrueba = NSSortDescriptor(key: "numeroPrueba", ascending: false)
             fetchRequest.sortDescriptors = [sortPrueba]
             for prueba in pruebas {
+                fatig = prueba.value(forKey: "fatiga") as! Int == 1
+                espleno = prueba.value(forKey: "esplenomegalia") as! Int == 1
+                ascit = prueba.value(forKey: "ascitis") as! Int == 1
                 
-                salida.append(Prueba(fatiga: prueba.value(forKey: "fatiga") as! Int, esplenomegalia: prueba.value(forKey: "esplenomegalia") as! Int, ascitis: prueba.value(forKey: "ascitis") as! Int, Nivelalbumina: prueba.value(forKey: "nivelBulimia") as! Int, numeroPrueba: prueba.value(forKey: "numeroPrueba") as! Int, resultado: prueba.value(forKey: "resultado") as! Double))
+                salida.append(Prueba(fatiga: fatig, esplenomegalia: espleno, ascitis: ascit, Nivelalbumina: prueba.value(forKey: "nivelAlbumina") as! Double, numeroPrueba: prueba.value(forKey: "numeroPrueba") as! Int, resultado: prueba.value(forKey: "resultado") as! Double))
             }
             
             return salida
