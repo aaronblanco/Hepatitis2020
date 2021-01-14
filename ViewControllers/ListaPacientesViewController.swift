@@ -9,26 +9,11 @@
 import UIKit
 import CoreData
 
-extension NSNotification.Name {
-    static let globalVariableChanged = NSNotification.Name(Bundle.main.bundleIdentifier! + ".globalVariable")
-}
-
-var actualizarTablas: Bool = true{
-    didSet{
-        NotificationCenter.default.post(name: .globalVariableChanged, object: nil)
-    }
-    
-}
-
 class ListaPacientesViewController: UIViewController {
     var usuario: Usuario!
     var pacientes = [Paciente]()
     var pacientesFiltrados = [Paciente]()
     
-    private var observer: NSObjectProtocol!
-
-    
-        
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -47,8 +32,8 @@ class ListaPacientesViewController: UIViewController {
         pacientes = DataBaseService().getDatos_Usuario(id_usuario: DataBaseService().getUsuario(dni: usuario.dni)!)!
         pacientesFiltrados = pacientes
         usuario.pacientes = pacientes
-        observer = NotificationCenter.default.addObserver(forName: .globalVariableChanged, object: nil, queue: .main) { [weak self] notification in self!.tableView.reloadData()}
-        actualizarTablas = true
+        
+        tableView.reloadData()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
