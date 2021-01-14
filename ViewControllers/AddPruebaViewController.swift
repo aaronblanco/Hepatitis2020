@@ -54,12 +54,15 @@ class AddPruebaViewController: UIViewController {
             return;
         }
         do{
-        let albu = Double(self.albumina.text!)
-            if(albu! > 5.0 || albu! < 0){
-                displayAlert(userMessage: "El nivel de albumina en sangre no es correcto.");
+            if let albu = Double(self.albumina.text!){
+                if(albu > 5.0 || albu < 0){
+                    displayAlert(userMessage: "El nivel de albumina en sangre debe de ser entre 5 y 0");
+                    return;
+                }
+            }else {
+                displayAlert(userMessage: "El nivel de albumina en sangre debe de ser un número entre 5 y 0");
                 return;
             }
-            
         }
        
         var fat = false;

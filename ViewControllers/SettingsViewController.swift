@@ -10,7 +10,6 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
-    
     //MARK: properties
     var usuario: Usuario!
     @IBOutlet weak var nombre: UITextField!
@@ -33,23 +32,35 @@ class SettingsViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func updateData(_ sender: UIButton) {
-        let userNombre = nombre.text
-        let userApellidos = apellidos.text
-        let userCorreo = correo.text
         
-        if((userNombre?.isEmpty)! || (userApellidos?.isEmpty)! || (userCorreo?.isEmpty)!){
-            displayAlert(userMessage: "Se requiere rellenar todos los campos.");
+        var userNombre = nombre.text
+        if(nombre.text==""){
+            userNombre = ""
+        }
+        
+        var userApellidos = apellidos.text
+        if(apellidos.text == ""){
+            userApellidos = ""
+        }
+        
+        var userCorreo = correo.text
+        if(correo.text == ""){
+            userCorreo = ""
+        }
+        
+        if((userNombre?.isEmpty)! && (userApellidos?.isEmpty)! && (userCorreo?.isEmpty)!){
+            displayAlert(userMessage: "Todos los campos están vacios.");
             return;
         }
         // var managedObjectContext = appDelegate.managedObjectContext
         
-        DataBaseService().updateUsuario(usuario: usuario, nombre: nombre.text!, apellidos: apellidos.text!, correo: correo.text!, nuevaContraseña: usuario.password)
+        DataBaseService().updateUsuario(usuario: usuario, nombre: userNombre!, apellidos: userApellidos!, correo: userCorreo!, nuevaContraseña: usuario.password)
         
         let alert = UIAlertController(title: "Alerta", message: "Datos modificados exitosamente.", preferredStyle: UIAlertController.Style.alert)
         
         let registerAction = UIAlertAction(title: "Aceptar", style: UIAlertAction.Style.default){
             action in
-            self.dismiss(animated: true, completion: nil);
+            //self.dismiss(animated: true, completion: nil);
         }
         alert.addAction(registerAction);
         self.present(alert, animated: true, completion: nil);

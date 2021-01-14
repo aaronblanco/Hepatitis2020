@@ -202,11 +202,22 @@ class DataBaseService {
                 
                 var insercion = try managedContext.fetch(fetchRequest)
                 
-                insercion[0].setValue(nombre, forKey: "nombre")
-                insercion[0].setValue(apellidos, forKey: "apellido")
-                insercion[0].setValue(correo, forKey: "correo")
-                insercion[0].setValue(nuevaContraseña, forKey: "password")
+                if(!nombre.isEmpty){
+                    insercion[0].setValue(nombre, forKey: "nombre")
+                }
                 
+                if(!apellidos.isEmpty){
+                    insercion[0].setValue(apellidos, forKey: "apellido")
+                }
+                
+                if(!correo.isEmpty){
+                    insercion[0].setValue(correo, forKey: "correo")
+                }
+                
+                if(!nuevaContraseña.isEmpty){
+                    insercion[0].setValue(nuevaContraseña, forKey: "password")
+                }
+    
                 try managedContext.save()
                 
             }  catch let error as NSError {
