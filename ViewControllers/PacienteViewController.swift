@@ -23,6 +23,8 @@ class PacienteViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    private var observer: NSObjectProtocol!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nombre.text = paciente.nombre
@@ -33,12 +35,13 @@ class PacienteViewController: UIViewController {
         tableView.dataSource = self
     }
 
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         pruebas = DataBaseService().getPruebas(dni: paciente.dni)!
         paciente.pruebas = pruebas
         imagenSuperviviencia.setImage(pruebas: pruebas)
         imagenSuperviviencia.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-        tableView.reloadData()
+        observer = NotificationCenter.default.addObserver(forName: .globalVariableChanged, object: nil, queue: .main) { [weak self] notification in self!.tableView.reloadData()}
+        actualizarTablas = true
     }
     
     @IBAction func cancel(_ sender: Any) {
