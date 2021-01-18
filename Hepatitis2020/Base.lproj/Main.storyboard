@@ -416,7 +416,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fIx-80-PQD">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="k9L-il-lqj">
+                                    <navigationItem title="Añadir prueba" id="k9L-il-lqj">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="jFD-IV-gGM">
                                             <connections>
                                                 <action selector="cancel:" destination="P2a-Zi-FtN" id="nQO-ib-nQ3"/>
@@ -707,7 +707,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H0O-Gd-Ddv">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="jhg-Ir-OQC">
+                                    <navigationItem title="Añadir paciente" id="jhg-Ir-OQC">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Wna-96-vF1">
                                             <connections>
                                                 <action selector="cancel:" destination="xS5-9X-sQQ" id="y1R-pG-A0s"/>
@@ -951,7 +951,7 @@
                                     <constraint firstAttribute="height" constant="44" id="yhh-HT-qld"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="Title" id="scJ-OW-NSU">
+                                    <navigationItem title="Perfil de paciente" id="scJ-OW-NSU">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="a7a-FG-4qm">
                                             <connections>
                                                 <action selector="cancel:" destination="1Dc-GM-VUe" id="uzu-p5-yVQ"/>
@@ -1278,7 +1278,7 @@
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sfq-6e-k4c">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
-                                    <navigationItem title="Title" id="SJf-Sa-r2T">
+                                    <navigationItem title="Configuración" id="SJf-Sa-r2T">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="mOD-p2-g7z">
                                             <connections>
                                                 <action selector="cancel:" destination="oaA-ZZ-BV3" id="gZ4-Jn-gET"/>
