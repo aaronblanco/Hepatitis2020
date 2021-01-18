@@ -46,6 +46,13 @@ class PacienteViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+
+    @IBAction func removePatient(_ sender: Any) {
+        if(DataBaseService().deletePaciente(paciente: paciente)){
+            dismiss(animated: true, completion: nil)
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let viewDestiny = segue.destination as! AddPruebaViewController

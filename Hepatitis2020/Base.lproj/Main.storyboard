@@ -957,6 +957,12 @@
                                                 <action selector="cancel:" destination="1Dc-GM-VUe" id="uzu-p5-yVQ"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Delete" id="wmR-kd-VXH">
+                                            <color key="tintColor" red="1" green="0.1230217176" blue="0.2423362671" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="removePatient:" destination="1Dc-GM-VUe" id="KZ7-2J-aua"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>

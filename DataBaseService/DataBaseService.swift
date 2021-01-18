@@ -415,7 +415,38 @@ class DataBaseService {
         return false
     }
     
-    
+    func deletePaciente(paciente: Paciente) -> Bool{
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return false }
+        
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "PacienteEntity")
+        fetchRequest.predicate = NSPredicate(format: "dni==%@", paciente.dni)
+        
+        do {
+            let encontrado = try managedContext.fetch(fetchRequest)[0]
+            
+            let fetchPruebas = NSFetchRequest<NSManagedObject>(entityName: "PruebaEntity")
+            fetchPruebas.predicate = NSPredicate(format: "paciente=%@", encontrado)
+            
+            managedContext.delete(encontrado)
+            
+            for object in try managedContext.fetch(fetchPruebas) {
+                managedContext.delete(object)
+            }
+            try managedContext.save()
+            
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+            return false
+        }
+        
+        
+        
+        return true;
+    }
 
 
 }
