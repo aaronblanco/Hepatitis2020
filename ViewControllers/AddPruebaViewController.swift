@@ -93,7 +93,7 @@ class AddPruebaViewController: UIViewController {
             return indexSeleccted()
         #endif
         #if LPS2
-        return Calculo(_fat: Bool, _esple: Bool, _asc: Bool, _albu: Double)
+        return Calculo(_fat: _fat, _esple: _esple, _asc: _asc, _albu: _albu)
         #endif
     }
     

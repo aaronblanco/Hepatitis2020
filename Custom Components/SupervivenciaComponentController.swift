@@ -1,6 +1,6 @@
 //
 //  SupervivenciaComponentController.swift
-//  Hepatitis2020 1
+//  Hepatitis2020
 //
 //  Created by Bruno on 26/12/2020.
 //  Copyright © 2020 ual. All rights reserved.
